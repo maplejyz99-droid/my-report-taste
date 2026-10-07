@@ -10,6 +10,9 @@
 - 9 项发行测试通过，覆盖隔离安装、拒绝覆盖、旧安装保护、私人文件排除、符号链接拒绝、扫描提示脱敏、重复打包一致性及合成表格与 JSON 一致性。
 - 最终 PPTX 与计划比对通过：5 页、标题、页 ID 和 main／backup 角色一致，0 个警告。
 - 89 个分发文件通过必备文件、相对 Markdown 链接、有限隐私模式与 PPTX XML 扫描。该数字不包括缓存、私人偏好、构建临时文件或 Git 历史。
+- ZIP 解包后在临时目录实际安装成功，已安装副本的严格库校验通过；未触及现有个人库。
+- GitHub 首次内容提交的 [自动检查](https://github.com/maplejyz99-droid/my-report-taste/actions/runs/37598645717) 已通过，运行环境为 Ubuntu、Python 3.10。它覆盖机械检查，不扩展为 Office 或视觉兼容性声明。
+- 公开仓库首次内容提交的 89 个文件与本地分发清单逐一比较 Git blob 指纹，一致，无多余文件。
 - 合成示例的 PPTX 结构与全部 5 页渲染已检查，详情见 [示例核验](../examples/synthetic-study/verification.md)。
 
 ## 发行前复核命令
@@ -28,7 +31,7 @@ python3 tools/package_release.py
 
 ## 验证边界
 
-本机运行环境为 macOS、Python 3.13。没有将 Windows、所有 Office 版本或其他代理产品标为兼容性已验证。GitHub Actions 仅执行机械检查，不证明视觉品质、科学正确性或真人讲述效果。
+本机运行环境为 macOS、Python 3.13；上述 CI 运行了 Ubuntu、Python 3.10 的机械检查。没有将 Windows、所有 Office 版本或其他代理产品标为兼容性已验证。GitHub Actions 不证明视觉品质、科学正确性或真人讲述效果。
 
 公开包仅包含工作流、抽象文字模式卡、代码、文档和原创合成示例。没有复制原始参考 PPT/PDF、品牌图片、字体文件、私人反馈、聊天记录或原工作区 Git 历史。
 
