@@ -1,31 +1,41 @@
-# 候选检索与明确选择
+# 内容任务与呈现选择
 
-`route` 不解析完整用户意图，也不从提到“官方模板”推断已经有模板。由代理结合当前指令、提供的文件和已确认偏好确定状态，再交给脚本校验。无需让用户重复确认清楚的指令。
+关键词只检索候选，不替用户作决定。代理结合当前请求、已有大纲、实际模板和 [taste-profile.md](taste-profile.md) 确定适用项，再声明选择；不要求用户学习命令或重复确认已有偏好。
 
-## 仅检索
+## 独立选择
+
+- `--content explain|progress|compare`：只选内容任务，规则见 [content-modes.md](content-modes.md)。不选配色，不强设推荐立场。
+- `--visual <预设 ID>`：只借用该组合的呈现规则；不加载叙事卡和专业内容工作流，不改变内容任务或输出媒介。布局卡内来源章节／内容顺序不生效。
+- `--preset <预设 ID>`：明确选完整参考组合，包括其叙事／证据／外观。仍按材料和当前任务取舍，不恢复固定页型配额。
+- `--card <卡片 ID>`：仅选指定维度，可重复；`NAR-001` 单选不带 `GRD-010 / CLR-010`。
+- `--content` 可与一种呈现选择组合；`--visual / --preset / --card` 三者互斥。
+- `--template-state provided|absent|unknown`：实际模板状态，默认 unknown。`--template` 是 provided 简写；与状态参数互斥。提供模板时抑制冲突配色及其 gate，保留兼容规则。文本提到“官方模板”不证明文件已提供。
+
+示例：
 
 ```bash
-python3 scripts/library.py route "比较 author-light 和 academic-oral-wine，暂时不选择" --json
+python3 scripts/library.py route "学术 Oral，暂未选外观" --json
+python3 scripts/library.py route --content explain --template
+python3 scripts/library.py route --content progress --visual author-light --template-state absent
+python3 scripts/library.py route --content compare --visual technical-review-dark --template-state absent
+python3 scripts/library.py route --card NAR-001 --template
+python3 scripts/library.py route --preset academic-oral-wine --template-state absent
 ```
 
-视觉结果标为 `_selection: candidate`：`main / auxiliary / palette / contracts / references / gate_refs` 均不激活，建议配置只在 `_candidate_config` 中。工作流标为 `workflow-candidate`，不选颜色。关键词匹配和有限否定处理只改善候选排序，不构成使用授权；即使输入“使用 author-light”，仍只返回候选。
+未声明选择时，候选的 main、auxiliary、palette、contracts、references 和 gate_refs 不激活；建议配置只在 _candidate_config。已声明的内容与呈现分别输出，不因更换外观重推内容任务。单选内容不关闭当前使用者已确认的偏好：代理可以另行采用本地档案中的外观，但公开版不预先确认任何颜色，也不得让颜色决定叙事。
 
-## 声明已经确定的状态
+## 九种兼容预设
 
-```bash
-python3 scripts/library.py route "研究进展" --preset author-light --template-state absent
-python3 scripts/library.py route "学术 Oral" --preset academic-oral-wine --template
-python3 scripts/library.py route "学术 Oral" --card NAR-001 --card GRD-010 --template
-```
+- `author-light`（别名 `research-progress-light`）：明亮蓝与浅色编辑式页面。
+- `academic-oral-wine`：酒红学术呈现；完整组合额外包含 `NAR-001`。
+- `experiment-review`：大幅工程证据与数据标注。
+- `technical-review-light`：浅色技术关系表达。
+- `technical-review-dark`：深色聚焦与连续比较表。
+- `project-green`：白色内容中心、绿色导航与重点。
+- `project-summary-dual-semantics`：主证据与确有需要的第二语义。
+- `neutral-evidence-review`：无彩系统与真实素材。
+- `dense-reading-report`：独立阅读型密度；不是颜色方案。远距投影任务不要借此启用阅读报告字号，输出格式仍由任务决定。
 
-- `--preset` 选择整套预设；`author-light` 是 `research-progress-light` 的公开别名。
-- `--card` 可重复，只选择这些卡。`NAR-001` 不再作为酒红整套预设的命令别名；单独选择它不加入 GRD 或 CLR 卡。需要完整组合时用 `--preset academic-oral-wine`。
-- `--preset` 和 `--card` 互斥，未知 ID 报错。字段是调用者声明，不是脚本替用户作出的决定，也不是授权记录。
-- `--template-state` 接受 `provided / absent / unknown`，默认 `unknown`。`--template` 是 `provided` 的简写，二者互斥。只有明确提供的状态影响配色；关键词不改变状态。
-- `provided` 保留既有模板并抑制所选配色卡及其 gate；叙事、证据与兼容密度仍可使用。`absent` 表示确定没有模板；`unknown` 表示未确定，不能写成“已核验无模板”。
+既有九个预设 ID 保留。旧内容 ID `academic-paper-oral` 兼容映射到 explain，`research-content` 映射到 progress；它们不是新增的第四、第五类任务。论文专业工作流按源材料另行加载。
 
-不要把自由文本含混之处随意填入参数。若用户只比较、不选择，不传选择参数；若用户仅选叙事，不把整套预设传入脚本。当前用户请求与参数冲突时先纠正参数，不能拿脚本输出覆盖用户原话。
-
-## 从早期版本迁移
-
-以前 `route "author-light"` 会直接返回带配色的路线。现在它返回不激活的候选；已经确认选择的自动化调用应改为 `route --preset author-light`。以前自然语言中的“官方模板”会抑制配色，现在应在检查输入后显式传 `--template`。JSON 仍为列表，新增 `_selection` 和 `_template_state`；候选配置移入 `_candidate_config`。不要把列表第一项默认为用户选择。
+早期的 `route "研究进展"` 会直接返回蓝色配置，现在只返回候选；已确定任务的调用应使用显式参数。`NAR-001` 是叙事卡而非整套酒红的别名；完整复用用 --preset，只改外观用 --visual。候选排序与参数声明不是授权记录，仍须核对用户原话。

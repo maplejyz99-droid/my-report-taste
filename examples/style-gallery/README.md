@@ -4,6 +4,10 @@ Nine independent content-page examples, not nine full decks. All values come fro
 
 九个独立单页示例，不代表九套完整演讲稿。数值全部为教学合成值；项目进度页展示的是示意审阅顺序，不是真实项目状态。单页不能验证整套叙事、转场或远距投影效果。
 
+These are presentation examples, not nine content routes. Select explain, progress, or compare for the task, then borrow layout, density, and color through `--visual`. A preview's milestone, evidence request, or system diagram is illustrative, not a required section. `--preset` still selects a full bundle explicitly.
+
+九种组合可以与三类内容任务独立搭配；只借外观不增加预览中的里程碑、研究议程或业务章节。现有 PNG／PPTX 保留原样，本次说明更新不代表重新渲染或验证了整套叙事。
+
 ## Browse and reuse
 
 Each PNG is a 1.5× export of its editable PPTX page. The first eight pages use a 1280 × 720 canvas; the reading report uses 1400 × 990, approximately the A-series landscape ratio. The gallery deliberately uses English labels so both README languages can share the same images. A real Chinese deck needs its own typography and line-wrap check.
@@ -33,4 +37,3 @@ The builder refuses an existing output directory. It produces drafts; rendering 
 Preset rules come from the repository's [optional author presets](../../skills/my-report-taste/references/author-presets.md). These original pages translate those rules rather than reproducing the external source decks. Their original material is covered by the project license; the upstream sources are not relicensed or endorsed.
 
 [Verification](verification.md) records the checks and known limits. The v0.1.0 release assets remain unchanged; this gallery was added to the main branch after that release.
-

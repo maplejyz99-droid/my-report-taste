@@ -18,6 +18,8 @@ REFERENCES_DIR = SKILL_ROOT / "references"
 ASSETS_DIR = SKILL_ROOT / "assets"
 CATALOG_PATH = REFERENCES_DIR / "catalog.json"
 ROUTES_PATH = REFERENCES_DIR / "routes.json"
+CONTENT_MODES = {"explain", "progress", "compare"}
+CONTENT_ALIASES = {"academic-paper-oral": "explain", "research-content": "progress"}
 
 ID_RE = re.compile(r"^[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)*-\d{3}$")
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -479,7 +481,7 @@ def route_state(route: dict[str, Any], selection: str, template_state: str) -> d
     result = dict(route)
     result["_selection"] = selection
     result["_template_state"] = template_state
-    if selection == "candidate":
+    if selection in {"candidate", "workflow-candidate"}:
         # A search hit must not leak active visual rules into the result.
         result["_candidate_config"] = {key: list(route.get(key, [])) for key in
                                        (*ROUTE_CARD_FIELDS, *ROUTE_FILE_FIELDS, "gate_refs")}
@@ -497,9 +499,31 @@ def route_state(route: dict[str, Any], selection: str, template_state: str) -> d
     return result
 
 
+def presentation_selection(route: dict[str, Any]) -> dict[str, Any]:
+    """Borrow presentation only; never infer content or a delivery medium."""
+    entries = {entry["id"]: entry for entry in catalog_entries()}
+    result = dict(route)
+    layout_cards = [card for key in ("main", "auxiliary") for card in route.get(key, [])
+                    if entries[card]["category"] != "narrative"]
+    result["main"] = layout_cards[:1]
+    result["auxiliary"] = layout_cards[1:]
+    result["palette"] = list(route.get("palette", []))
+    selected = {*layout_cards, *result["palette"]}
+    prefixes = tuple(card.casefold() + "." for card in selected)
+    result["gate_refs"] = [g for g in route.get("gate_refs", []) if g.startswith(prefixes)]
+    result["contracts"] = []
+    result["references"] = [entries[card]["pattern_file"] for card in
+                            [*layout_cards, *result["palette"]]]
+    result["_scope"] = "presentation-only"
+    result["_content_policy"] = "preserve-existing-content"
+    result["_medium_policy"] = "preserve-requested-medium"
+    return result
+
+
 def route_rows(
     terms: list[str], limit: int, *, supplied_template: bool = False,
     template_state: str = "unknown", preset: str | None = None, cards: list[str] | None = None,
+    content: str | None = None, visual: str | None = None,
 ) -> list[tuple[dict[str, Any], float, list[str]]]:
     routes = load_routes().get("routes", [])
     if not isinstance(routes, list):
@@ -510,29 +534,41 @@ def route_rows(
         if template_state == "absent":
             raise SystemExit("Conflicting template declarations")
         template_state = "provided"
-    selected = declared_selection(routes, preset, cards)
+    if sum(bool(value) for value in (preset, cards, visual)) > 1:
+        raise SystemExit("Choose only one of --preset, --visual or --card")
+    selected = declared_selection(routes, preset or visual, cards)
+    if selected is not None:
+        if visual:
+            selected = presentation_selection(selected)
+        else:
+            selected["_scope"] = "full-preset" if preset else "selected-cards"
+    content_route = None
+    if content:
+        content_id = CONTENT_ALIASES.get(content, content)
+        matches = [r for r in routes if r.get("type") == "workflow" and r.get("id") == content_id]
+        if content_id not in CONTENT_MODES or len(matches) != 1:
+            raise SystemExit(f"Unknown content task: {content}")
+        content_route = dict(matches[0])
+        content_route["_scope"] = "content-only"
     request = " ".join(terms)
     if request and any(request_mentions(value, request) for value in (
         "不要使用我的风格", "不用我的风格", "do not use my style", "without my style"
     )):
         return []
-    if selected is not None:
-        return [(route_state(selected, "selected", template_state), 0.0, ["caller-declared selection"])]
+    declared = [r for r in (content_route, selected) if r is not None]
+    if declared:
+        # A search limit must not silently drop a caller-declared dimension.
+        return [(route_state(r, "selected", template_state), 0.0, ["caller-declared selection"])
+                for r in declared]
     rows = []
     for route in routes:
         if not isinstance(route, dict):
             continue
         scored = score_route(route, terms)
         if scored is not None:
-            state = "candidate" if route.get("requires_explicit") else "workflow-candidate"
+            state = "workflow-candidate" if route.get("type") == "workflow" else "candidate"
             rows.append((route_state(route, state, template_state), scored[0], scored[1]))
-    rows.sort(
-        key=lambda row: (
-            -row[1],
-            -int(row[0].get("priority", 0)),
-            str(row[0].get("id", "")),
-        )
-    )
+    rows.sort(key=lambda row: (-row[1], -int(row[0].get("priority", 0)), str(row[0].get("id", ""))))
     return rows[:limit]
 
 
@@ -555,12 +591,12 @@ def print_routes(rows: list[tuple[dict[str, Any], float, list[str]]], as_json: b
             f"main={','.join(route.get('main', [])) or '-'} | "
             f"aux={','.join(route.get('auxiliary', [])) or '-'} | "
             f"palette={','.join(route.get('palette', [])) or '-'} | "
-            f"selection={route.get('_selection')} | template={route.get('_template_state')} | score={score:.2f}"
+            f"selection={route.get('_selection')} | scope={route.get('_scope', '-')} | score={score:.2f}"
         )
         if reasons:
             print(f"  match: {'; '.join(reasons)}")
-        if route.get("_selection") == "candidate":
-            print("  candidate only: no visual rules selected; use --preset or --card after resolving intent")
+        if route.get("_selection") in {"candidate", "workflow-candidate"}:
+            print("  candidate only; declare --content and/or --visual, --preset, --card after resolving intent")
         if route.get("type") == "workflow":
             print(f"  workflow: {', '.join(route.get('references', []))}; visual style: not selected")
         if route.get("_visual_policy"):
@@ -632,6 +668,9 @@ def validate_routes(
     if not isinstance(routes, list):
         errors.append("routes.routes must be a list")
         return
+    workflow_ids = {r.get("id") for r in routes if isinstance(r, dict) and r.get("type") == "workflow"}
+    if workflow_ids != CONTENT_MODES:
+        errors.append("routes must define exactly the explain, progress and compare content tasks")
     seen_routes: set[str] = set()
     for index, route in enumerate(routes):
         label = f"routes[{index}]"
@@ -924,19 +963,19 @@ def build_parser() -> argparse.ArgumentParser:
     vocab_parser.add_argument("--min-count", type=int, default=1)
     vocab_parser.add_argument("--json", action="store_true", dest="as_json")
 
-    route_parser = subparsers.add_parser("route", help="Find candidates or resolve explicitly declared route state")
+    route_parser = subparsers.add_parser("route", help="Find candidates or declare content and presentation selections")
     route_parser.add_argument("query", nargs="*", help="Scenario words; omit to list every route")
     route_parser.add_argument("--limit", type=int, default=5)
     route_parser.add_argument("--json", action="store_true", dest="as_json")
     template_group = route_parser.add_mutually_exclusive_group()
-    template_group.add_argument(
-        "--template", action="store_true",
-        help="Preserve a supplied template and suppress preset palette selection",
-    )
+    template_group.add_argument("--template", action="store_true",
+                                help="Preserve an actually supplied template")
     template_group.add_argument("--template-state", choices=("unknown", "provided", "absent"), default="unknown")
+    route_parser.add_argument("--content", help="Content task: explain, progress or compare")
     selection_group = route_parser.add_mutually_exclusive_group()
-    selection_group.add_argument("--preset", help="Explicit preset ID (author-light alias accepted)")
-    selection_group.add_argument("--card", action="append", help="Select only this card; repeat for multiple dimensions")
+    selection_group.add_argument("--visual", help="Borrow a preset's presentation only")
+    selection_group.add_argument("--preset", help="Select a complete preset (legacy IDs preserved)")
+    selection_group.add_argument("--card", action="append", help="Select just this card; repeat for dimensions")
 
     next_parser = subparsers.add_parser("next-id", help="Return the next ID for a prefix")
     next_parser.add_argument("prefix")
@@ -970,7 +1009,8 @@ def main() -> int:
         return 0
     if args.command == "route":
         print_routes(route_rows(args.query, args.limit, supplied_template=args.template,
-                               template_state=args.template_state, preset=args.preset, cards=args.card), args.as_json)
+                               template_state=args.template_state, content=args.content,
+                               preset=args.preset, visual=args.visual, cards=args.card), args.as_json)
         return 0
     if args.command == "search":
         if args.min_score_ratio is not None and not 0 <= args.min_score_ratio <= 1:

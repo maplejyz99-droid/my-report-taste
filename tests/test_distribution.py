@@ -1,4 +1,5 @@
 import json
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -40,6 +41,26 @@ class DistributionTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     install(fake_home / '.agents/skills')
             self.assertTrue(old.is_dir())
+
+    def test_installed_skill_resolves_content_separately_from_presentation(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            target = install(Path(tmp) / 'skills')
+            result = subprocess.run([
+                sys.executable, str(target / 'scripts/library.py'), 'route',
+                '--content', 'compare', '--visual', 'academic-oral-wine',
+                '--template-state', 'provided', '--json',
+            ], capture_output=True, text=True, check=True, timeout=10)
+            content, presentation = json.loads(result.stdout)
+            self.assertEqual(content['id'], 'compare')
+            self.assertEqual(content['_scope'], 'content-only')
+            self.assertNotIn('primary_recommendation', content)
+            self.assertTrue((target / content['references'][0]).is_file())
+            self.assertEqual(presentation['main'], ['GRD-010'])
+            self.assertEqual(presentation['palette'], [])
+            self.assertEqual(presentation['_scope'], 'presentation-only')
+            self.assertEqual(presentation['_content_policy'], 'preserve-existing-content')
+            self.assertNotIn('references/NAR-001.md', presentation['references'])
+            self.assertNotIn('references/academic-paper-oral-workflow.md', presentation['references'])
 
     def test_public_selection_ignores_private_inputs(self):
         with tempfile.TemporaryDirectory() as tmp:

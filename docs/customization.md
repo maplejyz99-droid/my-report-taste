@@ -10,6 +10,10 @@
 
 ## 保存自己的偏好
 
+先分清三个层次：内容任务是 explain／progress／compare；证据与密度由材料、受众和阅读方式决定；颜色与布局再从模板或预设选择。可以给进展汇报借用酒红外观，也可以给技术讲解借用绿色外观，不必连带参考材料的目录。
+
+仅换外观时用 `--visual`，完整复用某个参考组合时用 `--preset`。例如 `route --content progress --visual academic-oral-wine` 保持进展任务，不因酒红呈现变成论文 Oral。[具体接口](../skills/my-report-taste/references/routing.md)
+
 在汇报项目中自行建立 `.report-taste/profile.md`；只写与当前项目有关的规则。也可以在已安装 skill 内建立 `references/local-profile.md` 作为个人默认。项目规则优先，当前任务与官方模板更优先。
 
 ```markdown

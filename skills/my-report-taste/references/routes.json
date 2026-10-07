@@ -3,11 +3,11 @@
   "updated_at": "2026-10-07",
   "routes": [
     {
-      "id": "academic-paper-oral",
+      "id": "explain",
       "type": "workflow",
-      "priority": 100,
-      "title": "学术论文讲述流程",
-      "description": "组织论文理解、核心证据、方法解释与主讲／备份；视觉由已有模板、用户指定或个人场景偏好另行选择。",
+      "priority": 120,
+      "title": "研究／技术讲解",
+      "description": "理解问题、方法与证据；专业论文流程按实际材料加载，不预设颜色与目录。",
       "triggers": [
         "学术 Oral",
         "学术oral",
@@ -22,21 +22,81 @@
         "academic oral",
         "oral presentation",
         "oral",
-        "学术研讨会"
+        "学术研讨会",
+        "academic-paper-oral",
+        "技术讲解",
+        "方法介绍",
+        "架构讲解",
+        "系统介绍",
+        "技术分享",
+        "系统设计",
+        "研究讲解"
       ],
-      "use_cases": [
-        "论文会议 Oral",
-        "论文答辩",
-        "单篇论文讲解"
-      ],
+      "use_cases": [],
       "main": [],
       "auxiliary": [],
       "palette": [],
-      "contracts": [
-        "references/ppt-contract.md"
-      ],
+      "contracts": [],
       "references": [
-        "references/academic-paper-oral-workflow.md"
+        "references/content-modes.md"
+      ],
+      "gate_refs": []
+    },
+    {
+      "id": "progress",
+      "type": "workflow",
+      "priority": 120,
+      "title": "进展／结果汇报",
+      "description": "沿用已有问题，说明新增证据怎样改变判断；不预设视觉和推荐。",
+      "triggers": [
+        "研究进展",
+        "项目进展",
+        "组会",
+        "周报",
+        "实验复盘",
+        "实验结果",
+        "项目总结",
+        "阶段汇报",
+        "性能复盘",
+        "research update",
+        "research-content"
+      ],
+      "use_cases": [],
+      "main": [],
+      "auxiliary": [],
+      "palette": [],
+      "contracts": [],
+      "references": [
+        "references/content-modes.md"
+      ],
+      "gate_refs": []
+    },
+    {
+      "id": "compare",
+      "type": "workflow",
+      "priority": 120,
+      "title": "方案比较／选择",
+      "description": "按实际条件比较收益与代价，只有任务需要时才给推荐；不强推赢家。",
+      "triggers": [
+        "方案比较",
+        "方案评审",
+        "技术选型",
+        "技术决策",
+        "架构评审",
+        "比较方案",
+        "方案对比",
+        "性能比较",
+        "性能对比",
+        "benchmark",
+        "compare options"
+      ],
+      "use_cases": [],
+      "main": [],
+      "auxiliary": [],
+      "palette": [],
+      "contracts": [],
+      "references": [
+        "references/content-modes.md"
       ],
       "gate_refs": []
     },
@@ -45,7 +105,7 @@
       "requires_explicit": true,
       "priority": 95,
       "title": "葛冬冬式专家学术 Oral",
-      "description": "可选作者预设；明确选择时启用。结构高保真复用研究路线、职责化证据页、学术酒红标题和角色自适应高密度；排除源稿后段黄色教学产品宣传页。",
+      "description": "可选完整学术参考组合：研究问题与证据组织、角色自适应密度和酒红标题；可仅借外观，不强制来源章节、页型数量或未来工作。",
       "triggers": [
         "纯正学术味",
         "按葛冬冬",
@@ -87,7 +147,7 @@
       "id": "research-progress-light",
       "priority": 100,
       "title": "常规组会与研究进展",
-      "description": "可选作者预设；明确选择时启用。近白内容页、明亮蓝单主色、清楚章节转场和结论先行的常规个人汇报默认路线。",
+      "description": "可选作者预设；明确选择时启用。近白内容页、明亮蓝单主色、清楚章节转场和证据层级，不作为新使用者的默认路线。",
       "triggers": [
         "author-light",
         "亮蓝研究汇报",
@@ -357,39 +417,6 @@
         "oth-003.relational-density"
       ],
       "requires_explicit": true
-    },
-    {
-      "id": "research-content",
-      "type": "workflow",
-      "priority": 100,
-      "title": "研究与实验汇报内容流程",
-      "description": "只选内容工作流，不选择配色或私人默认。",
-      "triggers": [
-        "研究进展",
-        "项目进展",
-        "组会",
-        "周报",
-        "实验复盘",
-        "实验结果",
-        "技术方案",
-        "架构评审",
-        "项目总结",
-        "research update"
-      ],
-      "use_cases": [
-        "研究进展",
-        "实验复盘"
-      ],
-      "main": [],
-      "auxiliary": [],
-      "palette": [],
-      "contracts": [
-        "references/ppt-contract.md"
-      ],
-      "references": [
-        "references/research-progress-workflow.md"
-      ],
-      "gate_refs": []
     }
   ]
 }

@@ -5,7 +5,7 @@ description: "收藏并复用用户认可的汇报叙事、证据、密度和视
 
 # My Report Taste
 
-先组织内容与证据，再选择表现形式。本公开版提供工作流、检查工具和可选作者预设；不是一套自动替所有人决定颜色的主题，也不自带 PPT 渲染引擎。
+先确定内容任务，再组织证据与密度，最后选择外观。本公开版提供三类内容任务、检查工具和九个可选组合；不是九套强制叙事，不自动替所有人决定颜色，也不自带 PPT 渲染引擎。
 
 ## 边界与优先级
 
@@ -20,7 +20,8 @@ description: "收藏并复用用户认可的汇报叙事、证据、密度和视
 以下路径与脚本均相对本 skill 目录；仅阅读实际需要的分支。
 
 - 收藏参考：读 [intake-guide.md](references/intake-guide.md)、[collection-schema.md](references/collection-schema.md) 与 [catalog.json](references/catalog.json)。不把来源行业误当用户任务。
-- 选择路线：`route "真实请求"` 只检索候选，不从提及预设或模板推断选择。代理确认意图后用 `--preset` 选整套，或重复 `--card` 仅选指定维度；模板状态用 `--template-state provided/absent/unknown` 声明，`--template` 是 provided 简写。无需反复询问已明确的指令。参数与迁移见 [routing.md](references/routing.md)，组合见 [author-presets.md](references/author-presets.md)。
+- 内容任务：按 [content-modes.md](references/content-modes.md) 区分研究／技术讲解、进展／结果汇报、方案比较／选择；沿用已有请求与大纲，不强制目录或要求用户再选一次。
+- 选择路线：`route "真实请求"` 只检索候选，不从提及预设或模板推断选择。代理核对意图后用 `--content` 选内容、`--visual` 仅借外观、`--preset` 选完整组合，或重复 `--card` 仅选指定维度；模板状态用 `--template-state provided/absent/unknown` 声明，`--template` 是 provided 简写。参数与迁移见 [routing.md](references/routing.md)，组合见 [author-presets.md](references/author-presets.md)。
 - 需要某种页面：运行 `python3 scripts/library.py search "页面职责或证据形式"`，阅读返回卡片；明确指定 ID 时直达 `references/<ID>.md`。普通检索不自动采用卡片为全局风格。
 - 幻灯片：读 [ppt-contract.md](references/ppt-contract.md)；学术论文另读 [academic-paper-oral-workflow.md](references/academic-paper-oral-workflow.md)。官方模板优先，不用不兼容的颜色 gate 判失败。
 - 研究讨论或实验记录转汇报：读 [research-progress-workflow.md](references/research-progress-workflow.md)，不要因提到论文就重新研究整篇论文。
@@ -35,11 +36,13 @@ description: "收藏并复用用户认可的汇报叙事、证据、密度和视
 
 记录真正的事实源及版本，区分论文原文、原始数据、用户确认与派生大纲。源文没说明的机制保持未知。正式图在目标尺寸可读时优先保留；重绘必须有数据或明确解释职责，不因方便编辑重画。
 
-标题链、主证据与结论应先形成连贯讲述。限定条件贴近相应主张；不能将作者式汇报变成逐页泛化质疑，也不能把关键反例全部隐藏。
+标题、主证据与衔接应形成连贯讲述。结果页给有依据的判断，定义／方法／设置页可以使用具体名称，不强改成口号。限定条件贴近相应主张；不能将作者式汇报变成逐页泛化质疑，也不能把关键反例全部隐藏。只比较时不强推赢家，需要推荐时给有条件的倾向。
+
+排版前按 [qa-rubric.md](references/qa-rubric.md) 检查具体性、主次和页面必要性。章节、bullet、页型和未来工作不是配额；同组比较可以复用版式，不为显得自然逐页换花样。
 
 ## 制作、修订与交付
 
-沿用用户提供的目标、时长、模板与成品版本。确实影响结果的未知项才问，不反复确认已给信息。明确一套主视觉系统，按任务选择原生 PPTX、HTML、PDF 或 Markdown；引擎默认主题不是用户偏好。
+沿用用户提供的目标、时长、模板与成品版本。确实影响结果的未知项才问，不反复确认已给信息。明确一套主视觉系统，按任务选择原生 PPTX、HTML、PDF 或 Markdown；引擎默认主题不是用户偏好。完整预设保留兼容的叙事与证据原则；只换外观不改变主线、事实、证据去向或结论强度。来源卡片的章节与数量不能反过来决定新稿内容。
 
 制作环境未知时可运行 `python3 scripts/doctor.py`，只检测相关能力，不安装依赖或启动浏览器／Office；检测到工具不等于已经验证导出。已有可信环境信息时复用，不为每次局部修改重复自检。
 
@@ -51,7 +54,10 @@ description: "收藏并复用用户认可的汇报叙事、证据、密度和视
 
 ```bash
 python3 scripts/library.py route "学术 Oral" --template
-python3 scripts/library.py route "研究进展" --preset author-light --template-state absent
+python3 scripts/library.py route --content explain --template
+python3 scripts/library.py route --content progress --visual author-light --template-state absent
+python3 scripts/library.py route --content compare --visual technical-review-dark --template-state absent
+python3 scripts/library.py route --preset academic-oral-wine --template-state absent
 python3 scripts/library.py route --card NAR-001 --card GRD-010 --template
 python3 scripts/library.py validate --strict
 python3 scripts/verify_deck_plan.py PLAN.md
