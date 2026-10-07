@@ -2,7 +2,7 @@
 
 A Codex skill for building your own presentation preferences: narrative, evidence, density, visual choices, review, and bilingual speaker scripts.
 
-[中文](README.md) · [Installation](docs/installation.md) · [Example](examples/synthetic-study/README.md)
+[中文](README.md) · [Style gallery](#style-gallery) · [Installation](docs/installation.md) · [Example](examples/synthetic-study/README.md)
 
 ## What it does
 
@@ -32,11 +32,89 @@ Example request:
 
 > Use $my-report-taste to prepare English and Chinese scripts for this exact deck version. Exclude backup slides from the talk time and write an actual shorter version.
 
-## Neutral by default
+## Style gallery
 
-The 35 text-only reference cards are an optional example library. Their approval labels describe the library author's evaluations, not your preferences. No visual preset is automatically selected for a generic research update or academic oral.
+The 35 text-only cards form an optional reference library. Their approval labels describe the author's evaluations, not your preferences. Supplied templates and your current request take precedence.
 
-Select `author-light` explicitly for the author's blue research preset, or `NAR-001` for the academic narrative preset. Supplied templates take precedence. Store personal preferences in a project `.report-taste/profile.md` or an installed skill's `references/local-profile.md`.
+These **nine opt-in presets each have one representative content page**. They combine audience, content organization, density, and visual rules, rather than offering nine unrelated color schemes. Every preview comes from an actual editable page using the same original synthetic fixture. Click an image for full resolution.
+
+A single page illustrates layout, not a complete narrative or cross-page rhythm. The wine academic preset combines `NAR-001 + GRD-010 + CLR-010`; NAR-001 is not merely a color theme. The reading report keeps its own page ratio.
+
+[Preset definitions](skills/my-report-taste/references/author-presets.md) · [Images, editable pages, and builder source](examples/style-gallery/README.md)
+
+### 01 · Bright blue research update
+
+`author-light` — Research updates: highlight the main changes, then retain the complete comparison.
+
+![Bright blue research update: original synthetic content-page preview](examples/style-gallery/pages/author-light.png)
+
+> Use $my-report-taste with the `author-light` preset. Plan the content before creating the pages.
+
+### 02 · Wine academic report
+
+`academic-oral-wine` — Academic talks: wine headings, formal evidence, and visible provenance. This image demonstrates a result page only.
+
+![Wine academic report: original synthetic content-page preview](examples/style-gallery/pages/academic-oral-wine.png)
+
+> Use $my-report-taste with the `academic-oral-wine` preset. Plan the content before creating the pages.
+
+### 03 · Experiment and performance review
+
+`experiment-review` — Performance reviews: devote the canvas to a native chart, direct values, and an explicit comparison.
+
+![Experiment and performance review: original synthetic content-page preview](examples/style-gallery/pages/experiment-review.png)
+
+> Use $my-report-taste with the `experiment-review` preset. Plan the content before creating the pages.
+
+### 04 · Light technical architecture
+
+`technical-review-light` — Technical explanations: show input and output with a clear path and one emphasized stage.
+
+![Light technical architecture: original synthetic content-page preview](examples/style-gallery/pages/technical-review-light.png)
+
+> Use $my-report-taste with the `technical-review-light` preset. Plan the content before creating the pages.
+
+### 05 · Dark technical review
+
+`technical-review-dark` — Short technical reviews: a quiet petroleum-blue background and a continuous comparison table.
+
+![Dark technical review: original synthetic content-page preview](examples/style-gallery/pages/technical-review-dark.png)
+
+> Use $my-report-taste with the `technical-review-dark` preset. Plan the content before creating the pages.
+
+### 06 · Green project update
+
+`project-green` — Project updates: white content pages and a green focal point for the next milestone.
+
+![Green project update: original synthetic content-page preview](examples/style-gallery/pages/project-green.png)
+
+> Use $my-report-taste with the `project-green` preset. Plan the content before creating the pages.
+
+### 07 · Blue and sand project summary
+
+`project-summary-dual-semantics` — Project summaries: blue for existing evidence, a small sand accent for the next evidence needed.
+
+![Blue and sand project summary: original synthetic content-page preview](examples/style-gallery/pages/project-summary-dual-semantics.png)
+
+> Use $my-report-taste with the `project-summary-dual-semantics` preset. Plan the content before creating the pages.
+
+### 08 · Neutral evidence review
+
+`neutral-evidence-review` — Source and evidence reviews: neutral framing gives the source material priority.
+
+![Neutral evidence review: original synthetic content-page preview](examples/style-gallery/pages/neutral-evidence-review.png)
+
+> Use $my-report-taste with the `neutral-evidence-review` preset. Plan the content before creating the pages.
+
+### 09 · Dense reading report
+
+`dense-reading-report` — Independent reading: an A-series landscape ratio keeps data, mechanism, arithmetic, and limits together. Not the default for distant projection.
+
+![Dense reading report: original synthetic content-page preview](examples/style-gallery/pages/dense-reading-report.png)
+
+> Use $my-report-taste with the `dense-reading-report` preset. Plan the content before creating the pages.
+
+Store your preferences in a project `.report-taste/profile.md` or an installed skill's `references/local-profile.md`; these files are not distributed.
 
 ## Validate
 

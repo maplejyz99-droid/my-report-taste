@@ -1,0 +1,16 @@
+{
+  "synthetic": true,
+  "source": "../synthetic-study/source.json",
+  "scope": "Nine independent single-page layout demonstrations, not nine complete decks. All numbers are invented teaching values. The review sequence is an illustrative plan, not actual project progress.",
+  "items": [
+    {"id":"author-light","title":"The compact filter improves both fixture metrics","name_zh":"明亮蓝研究汇报","name_en":"Bright blue research update","cards":["GRD-002","CLR-002"],"role":"result","density":"mixed_evidence","width":1280,"height":720},
+    {"id":"academic-oral-wine","title":"The larger filter adds 0.5 pp at 75 ms extra cost","name_zh":"酒红学术报告","name_en":"Wine academic report","cards":["NAR-001","GRD-010","CLR-010"],"role":"comparison","density":"mixed_evidence","width":1280,"height":720},
+    {"id":"experiment-review","title":"Compact filtering cuts fixture latency by 29.2%","name_zh":"实验与性能复盘","name_en":"Experiment and performance review","cards":["GRD-005","DAT-001","DAT-004","CLR-002"],"role":"result","density":"figure_evidence","width":1280,"height":720},
+    {"id":"technical-review-light","title":"Candidate selection precedes ranking","name_zh":"浅色技术架构","name_en":"Light technical architecture","cards":["GRD-002","PRC-001","CLR-002"],"role":"mechanism","density":"figure_evidence","width":1280,"height":720},
+    {"id":"technical-review-dark","title":"Three settings, one comparison","name_zh":"深色技术评审","name_en":"Dark technical review","cards":["GRD-003","CMP-001","CLR-003"],"role":"comparison","density":"mixed_evidence","width":1280,"height":720},
+    {"id":"project-green","title":"Repeatability is the next review milestone","name_zh":"鲜绿项目汇报","name_en":"Green project update","cards":["GRD-006","CLR-006"],"role":"roadmap","density":"text_evidence","width":1280,"height":720},
+    {"id":"project-summary-dual-semantics","title":"Fixture evidence and untested deployment conditions","name_zh":"深蓝与沙金项目总结","name_en":"Blue and sand project summary","cards":["GRD-007","CLR-007"],"role":"boundary","density":"mixed_evidence","width":1280,"height":720},
+    {"id":"neutral-evidence-review","title":"What the fixture cannot tell us","name_zh":"无彩证据复盘","name_en":"Neutral evidence review","cards":["GRD-008","CLR-008"],"role":"boundary","density":"text_evidence","width":1280,"height":720},
+    {"id":"dense-reading-report","title":"Candidate filtering: evidence and limits","name_zh":"高密度阅读报告","name_en":"Dense reading report","cards":["GRD-004","OTH-003"],"role":"synthesis","density":"mixed_evidence","width":1400,"height":990}
+  ]
+}

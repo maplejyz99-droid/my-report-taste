@@ -2,7 +2,7 @@
 
 **把你认可的汇报方式变成可复用的工作流，而不是反复换一套 PPT 皮肤。**
 
-[English](README.en.md) · [安装](docs/installation.md) · [定制自己的偏好](docs/customization.md) · [完整示例](examples/synthetic-study/README.md)
+[English](README.en.md) · [风格预览](#风格预览) · [安装](docs/installation.md) · [定制自己的偏好](docs/customization.md) · [完整示例](examples/synthetic-study/README.md)
 
 这是一个面向 Codex 的个人汇报品味 skill：组织内容、证据、叙事与密度，选择可选视觉预设，核对成品，再整理逐页中英文讲稿。支持 PPT、PDF、HTML 幻灯片和汇报型 Markdown；实际文件生成与渲染由使用环境提供。
 
@@ -37,15 +37,89 @@ python3 tools/install.py
 
 > 使用 $my-report-taste。收藏这份报告的表格组织方式，不收藏它的颜色；记录适用场景和来源。
 
-## 默认中性，风格可选
+## 风格预览
 
-公开版保留 35 张文字模式卡，但没有替新使用者确认任何偏好。卡片中的 approved／confirmed 是作者示例库的评价。所有视觉组合都需要明确选择；官方模板始终优先。
+公开版保留 35 张文字模式卡，但没有替新使用者确认任何偏好。卡片中的 approved／confirmed 是作者示例库的评价；官方模板与当前任务始终优先。
 
-- `author-light`：明亮蓝研究汇报。
-- `NAR-001`：学术叙事，配合角色自适应密度；兼容时可采用酒红视觉。
-- 其他方向：深色技术评审、鲜绿项目汇报、无彩证据页、独立阅读报告。
+下面是 **9 个可选组合，每个组合一张代表性内容页**。它们组合了场景、内容组织、密度与视觉规则，不是 9 套互不相关的配色皮肤。全部使用同一份原创合成数据，从实际可编辑页面导出；点击图片可查看原尺寸。
 
-见[预设入口](skills/my-report-taste/references/author-presets.md)。私人的偏好可以放在项目 `.report-taste/profile.md`，不会被本仓库默认打包。
+单页预览只能展示页面语法，不能证明完整叙事或跨页节奏。例如酒红学术预设采用 `NAR-001 + GRD-010 + CLR-010`，不是把 `NAR-001` 简化成一种颜色。高密度报告保留自己的阅读比例。
+
+[预设说明](skills/my-report-taste/references/author-presets.md) · [图片、可编辑单页与构建源代码](examples/style-gallery/README.md)
+
+### 01 · 明亮蓝研究汇报
+
+`author-light` — 研究进展与组会：先看关键变化，再核对完整比较表。
+
+![明亮蓝研究汇报：原创合成内容页预览](examples/style-gallery/pages/author-light.png)
+
+> 使用 $my-report-taste，选择 `author-light` 预设。先整理内容计划，再制作页面。
+
+### 02 · 酒红学术报告
+
+`academic-oral-wine` — 论文讲解与研究报告：酒红标题、正式证据和可见来源；此图只展示结果页语法。
+
+![酒红学术报告：原创合成内容页预览](examples/style-gallery/pages/academic-oral-wine.png)
+
+> 使用 $my-report-taste，选择 `academic-oral-wine` 预设。先整理内容计划，再制作页面。
+
+### 03 · 实验与性能复盘
+
+`experiment-review` — 实验与性能复盘：主要面积交给数据图、直接数值和比较口径。
+
+![实验与性能复盘：原创合成内容页预览](examples/style-gallery/pages/experiment-review.png)
+
+> 使用 $my-report-taste，选择 `experiment-review` 预设。先整理内容计划，再制作页面。
+
+### 04 · 浅色技术架构
+
+`technical-review-light` — 技术方案与架构讲解：用节点层级和清楚的方向解释输入输出。
+
+![浅色技术架构：原创合成内容页预览](examples/style-gallery/pages/technical-review-light.png)
+
+> 使用 $my-report-taste，选择 `technical-review-light` 预设。先整理内容计划，再制作页面。
+
+### 05 · 深色技术评审
+
+`technical-review-dark` — 短篇技术评审：低对比石油蓝背景、共享表面与连续比较表。
+
+![深色技术评审：原创合成内容页预览](examples/style-gallery/pages/technical-review-dark.png)
+
+> 使用 $my-report-taste，选择 `technical-review-dark` 预设。先整理内容计划，再制作页面。
+
+### 06 · 鲜绿项目汇报
+
+`project-green` — 项目阶段汇报：白色内容页、鲜绿焦点，突出当前里程碑和下一项证据。
+
+![鲜绿项目汇报：原创合成内容页预览](examples/style-gallery/pages/project-green.png)
+
+> 使用 $my-report-taste，选择 `project-green` 预设。先整理内容计划，再制作页面。
+
+### 07 · 深蓝与沙金项目总结
+
+`project-summary-dual-semantics` — 阶段总结：深蓝表达已有证据，少量沙金标记下一类证据需求。
+
+![深蓝与沙金项目总结：原创合成内容页预览](examples/style-gallery/pages/project-summary-dual-semantics.png)
+
+> 使用 $my-report-taste，选择 `project-summary-dual-semantics` 预设。先整理内容计划，再制作页面。
+
+### 08 · 无彩证据复盘
+
+`neutral-evidence-review` — 源码、截图或原始材料复盘：页面系统保持中性，让证据本身可读。
+
+![无彩证据复盘：原创合成内容页预览](examples/style-gallery/pages/neutral-evidence-review.png)
+
+> 使用 $my-report-taste，选择 `neutral-evidence-review` 预设。先整理内容计划，再制作页面。
+
+### 09 · 高密度阅读报告
+
+`dense-reading-report` — 会后精读与综合报告：横向 A 系列比例，同页保留数据、机制、计算口径和边界；不作为远距投影默认。
+
+![高密度阅读报告：原创合成内容页预览](examples/style-gallery/pages/dense-reading-report.png)
+
+> 使用 $my-report-taste，选择 `dense-reading-report` 预设。先整理内容计划，再制作页面。
+
+私人的偏好可以放在项目 `.report-taste/profile.md`，不会被本仓库默认打包。
 
 ## 一个不需要私人论文的完整示例
 

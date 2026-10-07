@@ -16,4 +16,6 @@ No font download occurs during installation. No Microsoft font is bundled.
 
 The synthetic demonstration is original fixture data and presentation material created for this repository. It contains no measurements from a real research project. Core Python helpers use the Python standard library; Pillow and external rendering tools are optional dependencies under their own licenses and are not vendored here.
 
+The style gallery contains original editable pages and their rendered PNG previews using that same synthetic fixture. It includes no screenshots from the external reference decks. The gallery's Arial and Courier New font names are layout choices, not redistributed font binaries. Its optional builder requires a host-provided `@oai/artifact-tool`; neither that package nor its license is supplied by this repository.
+
 If you add an asset, document its exact source, license and allowed redistribution before including it. An asset being publicly viewable or supplied in a chat does not itself establish redistribution rights.
