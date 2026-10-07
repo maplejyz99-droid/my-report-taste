@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="632" height="188" viewBox="0 0 632 188" role="img" aria-labelledby="title desc" data-palette="dense-example">
+  <title id="title">Example only / no CLR ID</title>
+  <desc id="desc">Emphasis #96324A; Pale fill #FAEFF2; Canvas #FFFFFF; Body #27242A; Muted #656068; Line #E2DADF. Equal-sized swatches are not recommended area proportions.</desc>
+  <rect width="632" height="188" rx="6" fill="#FFFFFF"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#20252C">
+  <text x="16" y="29" font-size="18" font-weight="700">Example only / no CLR ID</text>
+  <g data-role="Emphasis" data-color="#96324A">
+    <rect x="16" y="56" width="40" height="40" rx="3" fill="#96324A" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="66" y="73" font-size="19" font-weight="600">#96324A</text>
+    <text x="66" y="93" font-size="13" fill="#535B65">Emphasis</text>
+  </g>
+  <g data-role="Pale fill" data-color="#FAEFF2">
+    <rect x="220" y="56" width="40" height="40" rx="3" fill="#FAEFF2" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="270" y="73" font-size="19" font-weight="600">#FAEFF2</text>
+    <text x="270" y="93" font-size="13" fill="#535B65">Pale fill</text>
+  </g>
+  <g data-role="Canvas" data-color="#FFFFFF">
+    <rect x="424" y="56" width="40" height="40" rx="3" fill="#FFFFFF" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="474" y="73" font-size="19" font-weight="600">#FFFFFF</text>
+    <text x="474" y="93" font-size="13" fill="#535B65">Canvas</text>
+  </g>
+  <g data-role="Body" data-color="#27242A">
+    <rect x="16" y="122" width="40" height="40" rx="3" fill="#27242A" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="66" y="139" font-size="19" font-weight="600">#27242A</text>
+    <text x="66" y="159" font-size="13" fill="#535B65">Body</text>
+  </g>
+  <g data-role="Muted" data-color="#656068">
+    <rect x="220" y="122" width="40" height="40" rx="3" fill="#656068" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="270" y="139" font-size="19" font-weight="600">#656068</text>
+    <text x="270" y="159" font-size="13" fill="#535B65">Muted</text>
+  </g>
+  <g data-role="Line" data-color="#E2DADF">
+    <rect x="424" y="122" width="40" height="40" rx="3" fill="#E2DADF" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="474" y="139" font-size="19" font-weight="600">#E2DADF</text>
+    <text x="474" y="159" font-size="13" fill="#535B65">Line</text>
+  </g>
+  </g>
+</svg>

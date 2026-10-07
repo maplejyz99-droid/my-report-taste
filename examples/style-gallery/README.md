@@ -10,6 +10,10 @@ These are presentation examples, not nine content routes. Select explain, progre
 
 ## Browse and reuse
 
+The bilingual repository READMEs now include palette IDs, role labels, copyable HEX values, and [SVG swatches](palettes). Six color cards cover eight bundles; the dense reading example has no fixed CLR card. Swatches use values from the linked cards, while the reading example uses its builder values. They are original reference graphics, not screenshots of external decks or official brand tokens; equal swatch sizes do not prescribe color-area ratios.
+
+中英文主 README 已补充每个组合的配色编号、用途、可复制 HEX 与色块。三个组合共用 CLR-002；高密度阅读示例单独标为“无固定 CLR”。本次不修改已有 PNG／PPTX 或配色规则。
+
 Each PNG is a 1.5× export of its editable PPTX page. The first eight pages use a 1280 × 720 canvas; the reading report uses 1400 × 990, approximately the A-series landscape ratio. The gallery deliberately uses English labels so both README languages can share the same images. A real Chinese deck needs its own typography and line-wrap check.
 
 - **明亮蓝研究汇报 / Bright blue research update** (`author-light`): [PNG](pages/author-light.png) · [editable PPTX](pages/author-light.pptx) · [page plan](plans/author-light.md)

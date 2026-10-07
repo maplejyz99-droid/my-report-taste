@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="632" height="254" viewBox="0 0 632 254" role="img" aria-labelledby="title desc" data-palette="CLR-007">
+  <title id="title">CLR-007 / Blue + sand</title>
+  <desc id="desc">Primary #284B7D; Mid blue #5F86B8; Pale blue #CBD9ED; Second role * #E8CDA9; Canvas #FFFFFF; Body #252525; Muted #8E8E8E; Line #D8DADD. Equal-sized swatches are not recommended area proportions.</desc>
+  <rect width="632" height="254" rx="6" fill="#FFFFFF"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#20252C">
+  <text x="16" y="29" font-size="18" font-weight="700">CLR-007 / Blue + sand</text>
+  <g data-role="Primary" data-color="#284B7D">
+    <rect x="16" y="56" width="40" height="40" rx="3" fill="#284B7D" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="66" y="73" font-size="19" font-weight="600">#284B7D</text>
+    <text x="66" y="93" font-size="13" fill="#535B65">Primary</text>
+  </g>
+  <g data-role="Mid blue" data-color="#5F86B8">
+    <rect x="220" y="56" width="40" height="40" rx="3" fill="#5F86B8" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="270" y="73" font-size="19" font-weight="600">#5F86B8</text>
+    <text x="270" y="93" font-size="13" fill="#535B65">Mid blue</text>
+  </g>
+  <g data-role="Pale blue" data-color="#CBD9ED">
+    <rect x="424" y="56" width="40" height="40" rx="3" fill="#CBD9ED" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="474" y="73" font-size="19" font-weight="600">#CBD9ED</text>
+    <text x="474" y="93" font-size="13" fill="#535B65">Pale blue</text>
+  </g>
+  <g data-role="Second role *" data-color="#E8CDA9">
+    <rect x="16" y="122" width="40" height="40" rx="3" fill="#E8CDA9" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="66" y="139" font-size="19" font-weight="600">#E8CDA9</text>
+    <text x="66" y="159" font-size="13" fill="#535B65">Second role *</text>
+  </g>
+  <g data-role="Canvas" data-color="#FFFFFF">
+    <rect x="220" y="122" width="40" height="40" rx="3" fill="#FFFFFF" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="270" y="139" font-size="19" font-weight="600">#FFFFFF</text>
+    <text x="270" y="159" font-size="13" fill="#535B65">Canvas</text>
+  </g>
+  <g data-role="Body" data-color="#252525">
+    <rect x="424" y="122" width="40" height="40" rx="3" fill="#252525" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="474" y="139" font-size="19" font-weight="600">#252525</text>
+    <text x="474" y="159" font-size="13" fill="#535B65">Body</text>
+  </g>
+  <g data-role="Muted" data-color="#8E8E8E">
+    <rect x="16" y="188" width="40" height="40" rx="3" fill="#8E8E8E" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="66" y="205" font-size="19" font-weight="600">#8E8E8E</text>
+    <text x="66" y="225" font-size="13" fill="#535B65">Muted</text>
+  </g>
+  <g data-role="Line" data-color="#D8DADD">
+    <rect x="220" y="188" width="40" height="40" rx="3" fill="#D8DADD" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="270" y="205" font-size="19" font-weight="600">#D8DADD</text>
+    <text x="270" y="225" font-size="13" fill="#535B65">Line</text>
+  </g>
+  </g>
+</svg>

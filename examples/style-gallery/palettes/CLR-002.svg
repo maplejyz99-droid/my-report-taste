@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="632" height="254" viewBox="0 0 632 254" role="img" aria-labelledby="title desc" data-palette="CLR-002">
+  <title id="title">CLR-002 / Bright blue</title>
+  <desc id="desc">Primary #0B6FCA; Dark blue #075CA8; Light blue #91C5F0; Pale blue #DDE9F4; Canvas #F7F7F7; Surface #FFFFFF; Body #343A40; Muted #6B737A; Line #DCE3E8. Equal-sized swatches are not recommended area proportions.</desc>
+  <rect width="632" height="254" rx="6" fill="#FFFFFF"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#20252C">
+  <text x="16" y="29" font-size="18" font-weight="700">CLR-002 / Bright blue</text>
+  <g data-role="Primary" data-color="#0B6FCA">
+    <rect x="16" y="56" width="40" height="40" rx="3" fill="#0B6FCA" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="66" y="73" font-size="19" font-weight="600">#0B6FCA</text>
+    <text x="66" y="93" font-size="13" fill="#535B65">Primary</text>
+  </g>
+  <g data-role="Dark blue" data-color="#075CA8">
+    <rect x="220" y="56" width="40" height="40" rx="3" fill="#075CA8" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="270" y="73" font-size="19" font-weight="600">#075CA8</text>
+    <text x="270" y="93" font-size="13" fill="#535B65">Dark blue</text>
+  </g>
+  <g data-role="Light blue" data-color="#91C5F0">
+    <rect x="424" y="56" width="40" height="40" rx="3" fill="#91C5F0" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="474" y="73" font-size="19" font-weight="600">#91C5F0</text>
+    <text x="474" y="93" font-size="13" fill="#535B65">Light blue</text>
+  </g>
+  <g data-role="Pale blue" data-color="#DDE9F4">
+    <rect x="16" y="122" width="40" height="40" rx="3" fill="#DDE9F4" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="66" y="139" font-size="19" font-weight="600">#DDE9F4</text>
+    <text x="66" y="159" font-size="13" fill="#535B65">Pale blue</text>
+  </g>
+  <g data-role="Canvas" data-color="#F7F7F7">
+    <rect x="220" y="122" width="40" height="40" rx="3" fill="#F7F7F7" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="270" y="139" font-size="19" font-weight="600">#F7F7F7</text>
+    <text x="270" y="159" font-size="13" fill="#535B65">Canvas</text>
+  </g>
+  <g data-role="Surface" data-color="#FFFFFF">
+    <rect x="424" y="122" width="40" height="40" rx="3" fill="#FFFFFF" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="474" y="139" font-size="19" font-weight="600">#FFFFFF</text>
+    <text x="474" y="159" font-size="13" fill="#535B65">Surface</text>
+  </g>
+  <g data-role="Body" data-color="#343A40">
+    <rect x="16" y="188" width="40" height="40" rx="3" fill="#343A40" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="66" y="205" font-size="19" font-weight="600">#343A40</text>
+    <text x="66" y="225" font-size="13" fill="#535B65">Body</text>
+  </g>
+  <g data-role="Muted" data-color="#6B737A">
+    <rect x="220" y="188" width="40" height="40" rx="3" fill="#6B737A" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="270" y="205" font-size="19" font-weight="600">#6B737A</text>
+    <text x="270" y="225" font-size="13" fill="#535B65">Muted</text>
+  </g>
+  <g data-role="Line" data-color="#DCE3E8">
+    <rect x="424" y="188" width="40" height="40" rx="3" fill="#DCE3E8" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="474" y="205" font-size="19" font-weight="600">#DCE3E8</text>
+    <text x="474" y="225" font-size="13" fill="#535B65">Line</text>
+  </g>
+  </g>
+</svg>

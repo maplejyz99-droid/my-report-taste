@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="632" height="254" viewBox="0 0 632 254" role="img" aria-labelledby="title desc" data-palette="CLR-003">
+  <title id="title">CLR-003 / Dark petroleum</title>
+  <desc id="desc">Field base #071F29; Field glow #173F4B; Field edge #01080C; Surface #1B313A; Strong surface #243B45; Focus #C5CBC9; Body #E7E9EA; Muted #A5AFB2; Line #536168. Equal-sized swatches are not recommended area proportions.</desc>
+  <rect width="632" height="254" rx="6" fill="#FFFFFF"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#20252C">
+  <text x="16" y="29" font-size="18" font-weight="700">CLR-003 / Dark petroleum</text>
+  <g data-role="Field base" data-color="#071F29">
+    <rect x="16" y="56" width="40" height="40" rx="3" fill="#071F29" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="66" y="73" font-size="19" font-weight="600">#071F29</text>
+    <text x="66" y="93" font-size="13" fill="#535B65">Field base</text>
+  </g>
+  <g data-role="Field glow" data-color="#173F4B">
+    <rect x="220" y="56" width="40" height="40" rx="3" fill="#173F4B" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="270" y="73" font-size="19" font-weight="600">#173F4B</text>
+    <text x="270" y="93" font-size="13" fill="#535B65">Field glow</text>
+  </g>
+  <g data-role="Field edge" data-color="#01080C">
+    <rect x="424" y="56" width="40" height="40" rx="3" fill="#01080C" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="474" y="73" font-size="19" font-weight="600">#01080C</text>
+    <text x="474" y="93" font-size="13" fill="#535B65">Field edge</text>
+  </g>
+  <g data-role="Surface" data-color="#1B313A">
+    <rect x="16" y="122" width="40" height="40" rx="3" fill="#1B313A" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="66" y="139" font-size="19" font-weight="600">#1B313A</text>
+    <text x="66" y="159" font-size="13" fill="#535B65">Surface</text>
+  </g>
+  <g data-role="Strong surface" data-color="#243B45">
+    <rect x="220" y="122" width="40" height="40" rx="3" fill="#243B45" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="270" y="139" font-size="19" font-weight="600">#243B45</text>
+    <text x="270" y="159" font-size="13" fill="#535B65">Strong surface</text>
+  </g>
+  <g data-role="Focus" data-color="#C5CBC9">
+    <rect x="424" y="122" width="40" height="40" rx="3" fill="#C5CBC9" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="474" y="139" font-size="19" font-weight="600">#C5CBC9</text>
+    <text x="474" y="159" font-size="13" fill="#535B65">Focus</text>
+  </g>
+  <g data-role="Body" data-color="#E7E9EA">
+    <rect x="16" y="188" width="40" height="40" rx="3" fill="#E7E9EA" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="66" y="205" font-size="19" font-weight="600">#E7E9EA</text>
+    <text x="66" y="225" font-size="13" fill="#535B65">Body</text>
+  </g>
+  <g data-role="Muted" data-color="#A5AFB2">
+    <rect x="220" y="188" width="40" height="40" rx="3" fill="#A5AFB2" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="270" y="205" font-size="19" font-weight="600">#A5AFB2</text>
+    <text x="270" y="225" font-size="13" fill="#535B65">Muted</text>
+  </g>
+  <g data-role="Line" data-color="#536168">
+    <rect x="424" y="188" width="40" height="40" rx="3" fill="#536168" stroke="#CBD0D5" stroke-width="0.75"/>
+    <text x="474" y="205" font-size="19" font-weight="600">#536168</text>
+    <text x="474" y="225" font-size="13" fill="#535B65">Line</text>
+  </g>
+  </g>
+</svg>
