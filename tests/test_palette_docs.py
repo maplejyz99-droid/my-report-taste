@@ -16,26 +16,21 @@ class PaletteDocsTests(unittest.TestCase):
 
     def test_each_preset_uses_its_existing_color_card(self):
         for filename in ['README.md', 'README.en.md']:
-            sections = re.split(r'^### \d{2} · ', (ROOT / filename).read_text(),
-                                flags=re.MULTILINE)[1:]
-            self.assertEqual(len(sections), len(self.items))
-            for item, section in zip(self.items, sections):
-                with self.subTest(readme=filename, preset=item['id']):
-                    self.assertIn(f"`{item['id']}`", section)
-                    cards = [card for card in item['cards'] if card.startswith('CLR-')]
-                    self.assertLessEqual(len(cards), 1)
-                    palette = cards[0] if cards else 'dense-example'
-                    self.assertEqual(section.count(
+            readme = (ROOT / filename).read_text()
+            palette_ids = {card for item in self.items for card in item['cards']
+                           if card.startswith('CLR-')}
+            for palette in palette_ids | {'dense-example'}:
+                with self.subTest(readme=filename, palette=palette):
+                    self.assertEqual(readme.count(
                         f'examples/style-gallery/palettes/{palette}.svg'), 1)
-                    if cards:
-                        self.assertIn(f'references/{palette}.md', section)
+                    if palette in palette_ids:
+                        self.assertIn(f'references/{palette}.md', readme)
                     else:
-                        self.assertEqual(item['id'], 'dense-reading-report')
                         self.assertIn('无固定 CLR 编号' if filename == 'README.md'
-                                      else 'no fixed CLR ID', section)
+                                      else 'no fixed CLR ID', readme)
                     svg = ET.parse(BASE / 'palettes' / f'{palette}.svg').getroot()
                     for chip in svg.findall('.//s:g[@data-color]', NS):
-                        self.assertIn(f"`{chip.get('data-color')}`", section)
+                        self.assertIn(f"`{chip.get('data-color')}`", readme)
 
     def test_swatches_match_source_and_visible_hex_labels(self):
         files = sorted((BASE / 'palettes').glob('*.svg'))

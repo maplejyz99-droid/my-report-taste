@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "scope": "Controlled presentation comparison, not six validated independent themes. Display IDs are documentation labels, not CLI route IDs.",
+  "source": "../../synthetic-study/source.json",
+  "synthetic": true,
+  "slide_size": {
+    "width": 1280,
+    "height": 720
+  },
+  "items": [
+    {
+      "id": "light-editorial",
+      "name_zh": "浅色编辑式",
+      "name_en": "Light editorial",
+      "preset": "author-light",
+      "legacy_presets": [
+        "author-light",
+        "experiment-review",
+        "technical-review-light"
+      ],
+      "cards": [
+        "GRD-002",
+        "CLR-002"
+      ],
+      "palette": "CLR-002"
+    },
+    {
+      "id": "academic-evidence",
+      "name_zh": "学术证据式",
+      "name_en": "Academic evidence",
+      "preset": "academic-oral-wine",
+      "legacy_presets": [
+        "academic-oral-wine"
+      ],
+      "cards": [
+        "GRD-010",
+        "CLR-010"
+      ],
+      "palette": "CLR-010"
+    },
+    {
+      "id": "dark-editorial",
+      "name_zh": "深色编辑式",
+      "name_en": "Dark editorial",
+      "preset": "technical-review-dark",
+      "legacy_presets": [
+        "technical-review-dark"
+      ],
+      "cards": [
+        "GRD-003",
+        "CLR-003"
+      ],
+      "palette": "CLR-003"
+    },
+    {
+      "id": "green-navigation",
+      "name_zh": "轻导航浅色",
+      "name_en": "Light navigation",
+      "preset": "project-green",
+      "legacy_presets": [
+        "project-green"
+      ],
+      "cards": [
+        "GRD-006",
+        "CLR-006"
+      ],
+      "palette": "CLR-006"
+    },
+    {
+      "id": "rail-evidence",
+      "name_zh": "侧轨证据式",
+      "name_en": "Rail evidence",
+      "preset": "project-summary-dual-semantics",
+      "legacy_presets": [
+        "project-summary-dual-semantics"
+      ],
+      "cards": [
+        "GRD-007",
+        "CLR-007"
+      ],
+      "palette": "CLR-007"
+    },
+    {
+      "id": "neutral-editorial",
+      "name_zh": "无彩编辑式",
+      "name_en": "Neutral editorial",
+      "preset": "neutral-evidence-review",
+      "legacy_presets": [
+        "neutral-evidence-review"
+      ],
+      "cards": [
+        "GRD-008",
+        "CLR-008"
+      ],
+      "palette": "CLR-008"
+    }
+  ],
+  "reading_mode": {
+    "preset": "dense-reading-report",
+    "cards": [
+      "GRD-004",
+      "OTH-003"
+    ],
+    "palette": null,
+    "legacy_preview": "../pages/dense-reading-report.png"
+  }
+}

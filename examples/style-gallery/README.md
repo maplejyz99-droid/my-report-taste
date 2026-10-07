@@ -1,4 +1,8 @@
-# Style gallery / 风格预览
+# Page-type examples and legacy bundles / 页型示例与兼容组合
+
+The main gallery now groups presentation candidates separately from page types, reading modes, and palettes. Start with the [same-content comparison](comparison/README.md). The nine original pages below remain available as illustrative page types and compatibility references, not nine proven independent themes.
+
+主 README 已合并三个蓝色入口，将独立阅读版式单列。以下九张原图、PPTX、计划与旧调用 ID 保留，不删除已有资产，也不改变路由行为。先看[同内容对照](comparison/README.md)，再按需要取用旧页型。
 
 Nine independent content-page examples, not nine full decks. All values come from the [original synthetic fixture](../synthetic-study/source.json). No private presentation, source-deck screenshot, logo, external figure, or font file is included.
 
@@ -10,7 +14,7 @@ These are presentation examples, not nine content routes. Select explain, progre
 
 ## Browse and reuse
 
-The bilingual repository READMEs now include palette IDs, role labels, copyable HEX values, and [SVG swatches](palettes). Six color cards cover eight bundles; the dense reading example has no fixed CLR card. Swatches use values from the linked cards, while the reading example uses its builder values. They are original reference graphics, not screenshots of external decks or official brand tokens; equal swatch sizes do not prescribe color-area ratios.
+The bilingual repository READMEs list palette IDs, role labels, copyable HEX values, and [SVG swatches](palettes) in their own section. Six color cards cover eight legacy bundles; the dense reading example has no fixed CLR card. Swatches use values from the linked cards, while the reading example uses its builder values. They are original reference graphics, not screenshots of external decks or official brand tokens; equal swatch sizes do not prescribe color-area ratios.
 
 中英文主 README 已补充每个组合的配色编号、用途、可复制 HEX 与色块。三个组合共用 CLR-002；高密度阅读示例单独标为“无固定 CLR”。本次不修改已有 PNG／PPTX 或配色规则。
 

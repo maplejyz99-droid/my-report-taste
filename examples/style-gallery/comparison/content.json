@@ -1,0 +1,17 @@
+{
+  "result": {
+    "title": "Compact filtering improves both fixture metrics",
+    "accuracy": "2.0 pp higher accuracy",
+    "latency": "35 ms less per query",
+    "comparison": "Compact vs. baseline",
+    "limit": "No repeated trials or deployment measurements."
+  },
+  "mechanism": {
+    "title": "Candidate filtering before ranking",
+    "filter": "Select a subset",
+    "ranker": "Order that subset",
+    "claim": "The ranker cannot recover candidates removed by the filter.",
+    "limit": "Candidate recall and internal stage costs remain unmeasured."
+  },
+  "source": "Source: candidate-filter-fixture-v1. Synthetic teaching data."
+}

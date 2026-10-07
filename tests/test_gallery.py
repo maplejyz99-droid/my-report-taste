@@ -25,10 +25,12 @@ class GalleryTests(unittest.TestCase):
         self.assertEqual(len(items), 9)
         self.assertEqual(len({item['id'] for item in items}), 9)
         self.assertTrue(self.gallery['synthetic'] and self.source['synthetic'])
+        # Legacy previews remain accessible, but are no longer nine theme entries.
+        readme = (BASE / 'README.md').read_text()
+        for item in items:
+            self.assertEqual(readme.count(f"pages/{item['id']}.png"), 1)
         for name in ['README.md', 'README.en.md']:
-            readme = (ROOT / name).read_text()
-            for item in items:
-                self.assertEqual(readme.count(f"examples/style-gallery/pages/{item['id']}.png"), 1)
+            self.assertIn('examples/style-gallery/README.md', (ROOT / name).read_text())
 
     def test_png_dimensions_and_page_ratio(self):
         for item in self.gallery['items']:

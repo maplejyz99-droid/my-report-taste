@@ -49,7 +49,7 @@ python3 tools/install.py
 
 比较不等于推荐；只有任务需要选择时才给有条件的倾向。同一报告可以以一种任务为主、局部借用另一种，不强制目录、页数、三个 bullet 或独立未来工作页。
 
-证据形式和密度再按材料、受众与阅读距离决定；最后采用官方模板、自己的偏好或下方九种呈现组合。**换成绿色不应多出里程碑，换成酒红也不应凭空补出研究议程。**
+证据形式和密度再按材料、受众与阅读距离决定；最后采用官方模板、自己的偏好或下方呈现候选与配色。**换成绿色不应多出里程碑，换成酒红也不应凭空补出研究议程。**
 
 直接说明任务即可，不需要先学参数：
 
@@ -73,161 +73,81 @@ python3 tools/install.py
 
 ## 风格预览
 
-公开版保留 35 张文字模式卡，但没有替新使用者确认任何偏好。卡片中的 approved／confirmed 是作者示例库的评价；官方模板与当前任务始终优先。
+这里按**候选呈现方向、页面类型、阅读方式和配色**分别展示，不再把原来的九个便捷组合都称作独立主题。三类内容任务保持不变。
 
-下面是 **9 个可选呈现组合，每个组合一张代表性内容页**。它们保留布局、密度、证据表达与配色的区别，但不分别规定九条内容路线，也不只是九种颜色。全部使用同一份原创合成数据，从实际可编辑页面导出；点击图片可查看原尺寸。
+- 原 01／03／04 合并为“浅色编辑式”入口，指标页、实验图表页和架构页作为同一体系下的页型。
+- 高密度阅读报告单列为阅读版式，不与配色主题并排计数。
+- 下方六个方向用于对照，**不是六套已经证明互不重复的主题**。旧预设 ID 和调用方式仍兼容。
 
-单页预览只能展示页面语法，不能证明完整叙事或跨页节奏。图中的章节和表达方式是该示例的选择，不是选中外观后必须复制的内容。例如酒红完整组合保留 `NAR-001 + GRD-010 + CLR-010`；只借呈现时采用 `GRD-010 + CLR-010`，不加载叙事卡。高密度报告预览保留自己的阅读比例，但实际输出媒介仍由任务决定。
+### 同内容对照
 
-[预设说明](skills/my-report-taste/references/author-presets.md) · [图片、可编辑单页与构建源代码](examples/style-gallery/README.md)
+每个候选都展示相同的两页：左为结果比较，右为机制解释。标题、三组数据、两项差值、四个机制节点及限制说明保持一致；改变的是证据摆放、导航、文字层级与配色。所有数值来自原创合成数据。
 
-### 配色编号怎么看
+[完整对照说明与可编辑文件](examples/style-gallery/comparison/README.md) · [保留的九张旧页型示例](examples/style-gallery/README.md) · [配色编号](#配色编号怎么看)
 
-`CLR` 是配色卡，`GRD` 是版式／密度卡，`NAR` 是叙事卡；`author-light` 等名称则是组合 ID。编号不是排名，也不是九套一一对应的配色：01、03、04 共用 `CLR-002`，09 不固定配色。
+### 01 · 浅色编辑式
 
-每个预览下方展示**配色卡中的主要 HEX 色值与用途**，可点击编号查看完整色阶和使用规则。这些是近似重建配方，不是外部品牌的官方色值，也不承诺逐个等于预览图的像素；单页会按角色选取色阶。等大的色块仅用于查色，不代表页面用色面积。
+蓝色的指标、实验图表、架构流程统一归入这个入口。页面职责决定用表格还是流程，不再把换页型称作换主题。
 
-只指定颜色、不更换内容路线或版式时，可以说：
+![浅色编辑式：相同结果页与机制页对照](examples/style-gallery/comparison/pages/light-editorial/preview.png)
 
-> 使用 $my-report-taste，只采用 CLR-006 配色；内容、页序与版式保持不变，风险色仅在有实际风险时使用。
+[结果页原图](examples/style-gallery/comparison/pages/light-editorial/result.png) · [机制页原图](examples/style-gallery/comparison/pages/light-editorial/mechanism.png) · [两页可编辑 PPTX](examples/style-gallery/comparison/pages/light-editorial/example.pptx)
 
-### 01 · 明亮蓝研究汇报
+配色：[CLR-002](skills/my-report-taste/references/CLR-002.md)；沿用调用 `--visual author-light`。这里的展示名称不是新增 CLI 参数。
 
-`author-light` — 明亮蓝与浅色编辑式页面；预览用关键变化和比较表展示层级。
+旧的 `experiment-review` 和 `technical-review-light` 仍保留原有工程证据／流程规则，不静默改写成同一个路由；只合并 README 的主题入口。原案例按[指标与表格](examples/style-gallery/pages/author-light.png)、[实验图表](examples/style-gallery/pages/experiment-review.png)、[架构流程](examples/style-gallery/pages/technical-review-light.png)查阅。
 
-![明亮蓝研究汇报：原创合成内容页预览](examples/style-gallery/pages/author-light.png)
+### 02 · 学术证据式
 
-配色卡：[CLR-002 · 明亮蓝](skills/my-report-taste/references/CLR-002.md)
+以正式证据为主体，解释与来源有固定位置。这里保留酒红作示范，但学术证据组织不依赖酒红，也不额外加载 NAR-001 叙事。
 
-![CLR-002 配色：主蓝、浅蓝、冷白画布与深灰正文](examples/style-gallery/palettes/CLR-002.svg)
+![学术证据式：相同结果页与机制页对照](examples/style-gallery/comparison/pages/academic-evidence/preview.png)
 
-- 主蓝 `#0B6FCA`；深蓝 `#075CA8`；浅蓝 `#91C5F0`；淡蓝底 `#DDE9F4`。
-- 画布 `#F7F7F7`；表面 `#FFFFFF`；正文 `#343A40`；辅助文字 `#6B737A`；线条 `#DCE3E8`。
+[结果页原图](examples/style-gallery/comparison/pages/academic-evidence/result.png) · [机制页原图](examples/style-gallery/comparison/pages/academic-evidence/mechanism.png) · [两页可编辑 PPTX](examples/style-gallery/comparison/pages/academic-evidence/example.pptx)
 
-珊瑚色 `#FE7265` 仅标记真实风险／异常，不作为普通方法分类色。
+配色：[CLR-010](skills/my-report-taste/references/CLR-010.md)；沿用调用 `--visual academic-oral-wine`。这里的展示名称不是新增 CLI 参数。
 
-> 使用 $my-report-taste，只借用 `author-light` 的呈现规则；内容按当前任务组织，保留已确认主线与证据。
+### 03 · 深色编辑式
 
-### 02 · 酒红学术报告
+深石油蓝背景、共享蓝灰表面和明度层级。结果页与机制页都采用主证据／解释的强分区，不默认增加金色。
 
-`academic-oral-wine` — 酒红标题、正式证据和可见来源；完整组合还含 NAR-001，本图只展示结果页语法。
+![深色编辑式：相同结果页与机制页对照](examples/style-gallery/comparison/pages/dark-editorial/preview.png)
 
-![酒红学术报告：原创合成内容页预览](examples/style-gallery/pages/academic-oral-wine.png)
+[结果页原图](examples/style-gallery/comparison/pages/dark-editorial/result.png) · [机制页原图](examples/style-gallery/comparison/pages/dark-editorial/mechanism.png) · [两页可编辑 PPTX](examples/style-gallery/comparison/pages/dark-editorial/example.pptx)
 
-配色卡：[CLR-010 · 学术酒红](skills/my-report-taste/references/CLR-010.md)
+配色：[CLR-003](skills/my-report-taste/references/CLR-003.md)；沿用调用 `--visual technical-review-dark`。这里的展示名称不是新增 CLI 参数。
 
-![CLR-010 配色：酒红标题、浅酒红强调底、来源蓝与冷白背景](examples/style-gallery/palettes/CLR-010.svg)
+### 04 · 轻导航浅色
 
-- 标题 `#7D1E2F`；局部强调 `#A12746`；浅酒红底 `#FAE9EC`；引用／链接 `#0077CC`。
-- 画布 `#FFFFFF`；表面 `#F3F4F6`；正文 `#1F2430`；辅助文字 `#666A73`；线条 `#D9DCE3`。
+在白色内容区上加入细边导航与小型章节胶囊。保留既有鲜绿配色；与浅色编辑式仍有重叠，暂不宣称是完全独立的主题。
 
-来源蓝不承担普通装饰；紫色／深蓝分支色仅在确有对应语义时启用，完整取值见配色卡。
+![轻导航浅色：相同结果页与机制页对照](examples/style-gallery/comparison/pages/green-navigation/preview.png)
 
-> 使用 $my-report-taste，只借用 `academic-oral-wine` 的呈现规则；内容按当前任务组织，保留已确认主线与证据。
+[结果页原图](examples/style-gallery/comparison/pages/green-navigation/result.png) · [机制页原图](examples/style-gallery/comparison/pages/green-navigation/mechanism.png) · [两页可编辑 PPTX](examples/style-gallery/comparison/pages/green-navigation/example.pptx)
 
-### 03 · 实验与性能复盘
+配色：[CLR-006](skills/my-report-taste/references/CLR-006.md)；沿用调用 `--visual project-green`。这里的展示名称不是新增 CLI 参数。
 
-`experiment-review` — 大幅证据画布与直接数值标注；图表类型和指标数量由材料决定。
+### 05 · 侧轨证据式
 
-![实验与性能复盘：原创合成内容页预览](examples/style-gallery/pages/experiment-review.png)
+固定窄侧轨组织导航，主体保留连续证据。结果页以少量沙金标记第二指标；机制页没有必要的第二颜色语义，因此不强加沙金。
 
-配色卡：[CLR-002 · 明亮蓝](skills/my-report-taste/references/CLR-002.md)，与 01 共用；区别在证据画布与数据标注，不在另一套颜色。
+![侧轨证据式：相同结果页与机制页对照](examples/style-gallery/comparison/pages/rail-evidence/preview.png)
 
-![CLR-002 共用配色：当前值主蓝，次要系列浅蓝](examples/style-gallery/palettes/CLR-002.svg)
+[结果页原图](examples/style-gallery/comparison/pages/rail-evidence/result.png) · [机制页原图](examples/style-gallery/comparison/pages/rail-evidence/mechanism.png) · [两页可编辑 PPTX](examples/style-gallery/comparison/pages/rail-evidence/example.pptx)
 
-- 当前值 `#0B6FCA`；深蓝 `#075CA8`；次要系列 `#91C5F0`；浅底 `#DDE9F4`。
-- 画布 `#F7F7F7`；表面 `#FFFFFF`；正文 `#343A40`；辅助文字 `#6B737A`；线条 `#DCE3E8`。
+配色：[CLR-007](skills/my-report-taste/references/CLR-007.md)；沿用调用 `--visual project-summary-dual-semantics`。这里的展示名称不是新增 CLI 参数。
 
-异常才使用 `#FE7265`，正常比较不需要额外引入彩色系列。
+### 06 · 无彩编辑式
 
-> 使用 $my-report-taste，只借用 `experiment-review` 的呈现规则；内容按当前任务组织，保留已确认主线与证据。
+通过字号、位置、细线和灰度组织证据。原始素材可保留颜色；这次纯表格／流程对照未覆盖照片、截图与跨页节奏，独立性仍待更多材料验证。
 
-### 04 · 浅色技术架构
+![无彩编辑式：相同结果页与机制页对照](examples/style-gallery/comparison/pages/neutral-editorial/preview.png)
 
-`technical-review-light` — 浅色网格、清晰节点层级与连线；是否需要架构图由解释任务决定。
+[结果页原图](examples/style-gallery/comparison/pages/neutral-editorial/result.png) · [机制页原图](examples/style-gallery/comparison/pages/neutral-editorial/mechanism.png) · [两页可编辑 PPTX](examples/style-gallery/comparison/pages/neutral-editorial/example.pptx)
 
-![浅色技术架构：原创合成内容页预览](examples/style-gallery/pages/technical-review-light.png)
+配色：[CLR-008](skills/my-report-taste/references/CLR-008.md)；沿用调用 `--visual neutral-evidence-review`。这里的展示名称不是新增 CLI 参数。
 
-配色卡：[CLR-002 · 明亮蓝](skills/my-report-taste/references/CLR-002.md)，与 01、03 共用；节点层级与连线承担结构区别。
-
-![CLR-002 共用配色：主路径蓝、淡蓝节点和灰色结构线](examples/style-gallery/palettes/CLR-002.svg)
-
-- 主路径 `#0B6FCA`；深蓝 `#075CA8`；浅蓝 `#91C5F0`；淡蓝节点底 `#DDE9F4`。
-- 画布 `#F7F7F7`；表面 `#FFFFFF`；正文 `#343A40`；辅助文字 `#6B737A`；线条 `#DCE3E8`。
-
-`#FE7265` 仅用于真实风险节点，不为每个模块分配不同颜色。
-
-> 使用 $my-report-taste，只借用 `technical-review-light` 的呈现规则；内容按当前任务组织，保留已确认主线与证据。
-
-### 05 · 深色技术评审
-
-`technical-review-dark` — 低对比石油蓝背景、共享表面与连续比较表；不自动变成决策报告。
-
-![深色技术评审：原创合成内容页预览](examples/style-gallery/pages/technical-review-dark.png)
-
-配色卡：[CLR-003 · 深石油蓝](skills/my-report-taste/references/CLR-003.md)
-
-![CLR-003 配色：深石油蓝背景层次、蓝灰表面和浅色正文](examples/style-gallery/palettes/CLR-003.svg)
-
-- 背景锚点 `#071F29` → `#173F4B`，边缘 `#01080C`；表面 `#1B313A`／`#243B45`。
-- 正文 `#E7E9EA`；辅助文字 `#A5AFB2`；线条 `#536168`；低饱和焦点 `#C5CBC9`。
-
-这些是柔和背景明暗层的取值，不是要铺成分段渐变条。默认不加金色；`#C9A84A` 仅为有明确唯一焦点时的条件候选。
-
-> 使用 $my-report-taste，只借用 `technical-review-dark` 的呈现规则；内容按当前任务组织，保留已确认主线与证据。
-
-### 06 · 鲜绿项目汇报
-
-`project-green` — 白色内容页、鲜绿导航和焦点；不要求添加里程碑或下一步章节。
-
-![鲜绿项目汇报：原创合成内容页预览](examples/style-gallery/pages/project-green.png)
-
-配色卡：[CLR-006 · 鲜绿与薄荷浅阶](skills/my-report-taste/references/CLR-006.md)
-
-![CLR-006 配色：鲜绿主色、薄荷浅阶和白色画布](examples/style-gallery/palettes/CLR-006.svg)
-
-- 主绿 `#00A273`；深绿 `#008C63`；中绿 `#31B58D`；浅绿 `#9FDBCA`；薄荷底 `#E5F6F1`。
-- 画布 `#FFFFFF`；正文 `#171A18`；辅助文字 `#5F6763`；线条 `#CEDBD6`。
-
-橙色 `#F07F3C` 仅用于异常；黄色 `#F2D84C` 仅在同图存在独立第二指标时启用，都不是日常装饰色。
-
-> 使用 $my-report-taste，只借用 `project-green` 的呈现规则；内容按当前任务组织，保留已确认主线与证据。
-
-### 07 · 深蓝与沙金项目总结
-
-`project-summary-dual-semantics` — 深蓝主证据与少量沙金辅助语义；只有材料确有第二语义时启用，不强分当前／未来。
-
-![深蓝与沙金项目总结：原创合成内容页预览](examples/style-gallery/pages/project-summary-dual-semantics.png)
-
-配色卡：[CLR-007 · 深蓝与沙金](skills/my-report-taste/references/CLR-007.md)
-
-![CLR-007 配色：深蓝主证据、可选沙金第二语义和白色画布](examples/style-gallery/palettes/CLR-007.svg)
-
-- 主蓝 `#284B7D`；中蓝 `#5F86B8`；浅蓝 `#CBD9ED`；第二语义沙金 `#E8CDA9`。
-- 画布 `#FFFFFF`；正文 `#252525`；辅助文字 `#8E8E8E`；线条 `#D8DADD`。
-
-色卡中的 `Second role *` 表示**有第二语义才用沙金**，不做蓝金各半，也不把沙金当风险色。辅助灰只用于短标签，投影前须复核对比度。
-
-> 使用 $my-report-taste，只借用 `project-summary-dual-semantics` 的呈现规则；内容按当前任务组织，保留已确认主线与证据。
-
-### 08 · 无彩证据复盘
-
-`neutral-evidence-review` — 中性的页面系统与可读原始素材；不附带公司介绍或招聘叙事。
-
-![无彩证据复盘：原创合成内容页预览](examples/style-gallery/pages/neutral-evidence-review.png)
-
-配色卡：[CLR-008 · 黑白灰](skills/my-report-taste/references/CLR-008.md)
-
-![CLR-008 配色：近黑、深灰、白色与冷中性灰](examples/style-gallery/palettes/CLR-008.svg)
-
-- 正文／关键系列 `#222222`；深灰表面 `#555555`；辅助文字 `#707070`。
-- 画布 `#FFFFFF` 或 `#F7F7F7`；线条 `#D0D0D0`。
-
-没有固定的彩色强调色。照片、截图保留原色，但其颜色不自动扩展为全局主题。
-
-> 使用 $my-report-taste，只借用 `neutral-evidence-review` 的呈现规则；内容按当前任务组织，保留已确认主线与证据。
-
-### 09 · 高密度阅读报告
+## 独立阅读版式
 
 `dense-reading-report` — 独立阅读型密度，预览采用横向 A 系列比例；不是远距投影默认，也不自动改变目标格式。
 
@@ -243,6 +163,68 @@ python3 tools/install.py
 实际使用时可以另选配色卡，或沿用用户／官方模板；改变颜色不改变阅读型密度。
 
 > 使用 $my-report-taste，只借用 `dense-reading-report` 的呈现规则；内容按当前任务组织，保留已确认主线与证据。
+
+## 配色编号怎么看
+
+`CLR` 是配色卡，`GRD` 是版式／密度卡，`NAR` 是叙事卡。它们可以分别选取。六套配色不等于六条内容路线，也不能单凭颜色证明版式独立。
+
+以下色值来自既有配色卡，是近似重建配方，不是外部品牌的官方色值。等大的色块仅用于查色，不代表页面用色面积；示例页会按角色选取色阶。高密度阅读示例的用色已在上方单独标注，不新增 CLR 编号。
+
+> 使用 $my-report-taste，只采用 CLR-006 配色；内容、页序与版式保持不变，风险色仅在有实际风险时使用。
+
+配色卡：[CLR-002 · 明亮蓝](skills/my-report-taste/references/CLR-002.md)
+
+![CLR-002 配色：主蓝、浅蓝、冷白画布与深灰正文](examples/style-gallery/palettes/CLR-002.svg)
+
+- 主蓝 `#0B6FCA`；深蓝 `#075CA8`；浅蓝 `#91C5F0`；淡蓝底 `#DDE9F4`。
+- 画布 `#F7F7F7`；表面 `#FFFFFF`；正文 `#343A40`；辅助文字 `#6B737A`；线条 `#DCE3E8`。
+
+珊瑚色 `#FE7265` 仅标记真实风险／异常，不作为普通方法分类色。
+
+配色卡：[CLR-010 · 学术酒红](skills/my-report-taste/references/CLR-010.md)
+
+![CLR-010 配色：酒红标题、浅酒红强调底、来源蓝与冷白背景](examples/style-gallery/palettes/CLR-010.svg)
+
+- 标题 `#7D1E2F`；局部强调 `#A12746`；浅酒红底 `#FAE9EC`；引用／链接 `#0077CC`。
+- 画布 `#FFFFFF`；表面 `#F3F4F6`；正文 `#1F2430`；辅助文字 `#666A73`；线条 `#D9DCE3`。
+
+来源蓝不承担普通装饰；紫色／深蓝分支色仅在确有对应语义时启用，完整取值见配色卡。
+
+配色卡：[CLR-003 · 深石油蓝](skills/my-report-taste/references/CLR-003.md)
+
+![CLR-003 配色：深石油蓝背景层次、蓝灰表面和浅色正文](examples/style-gallery/palettes/CLR-003.svg)
+
+- 背景锚点 `#071F29` → `#173F4B`，边缘 `#01080C`；表面 `#1B313A`／`#243B45`。
+- 正文 `#E7E9EA`；辅助文字 `#A5AFB2`；线条 `#536168`；低饱和焦点 `#C5CBC9`。
+
+这些是柔和背景明暗层的取值，不是要铺成分段渐变条。默认不加金色；`#C9A84A` 仅为有明确唯一焦点时的条件候选。
+
+配色卡：[CLR-006 · 鲜绿与薄荷浅阶](skills/my-report-taste/references/CLR-006.md)
+
+![CLR-006 配色：鲜绿主色、薄荷浅阶和白色画布](examples/style-gallery/palettes/CLR-006.svg)
+
+- 主绿 `#00A273`；深绿 `#008C63`；中绿 `#31B58D`；浅绿 `#9FDBCA`；薄荷底 `#E5F6F1`。
+- 画布 `#FFFFFF`；正文 `#171A18`；辅助文字 `#5F6763`；线条 `#CEDBD6`。
+
+橙色 `#F07F3C` 仅用于异常；黄色 `#F2D84C` 仅在同图存在独立第二指标时启用，都不是日常装饰色。
+
+配色卡：[CLR-007 · 深蓝与沙金](skills/my-report-taste/references/CLR-007.md)
+
+![CLR-007 配色：深蓝主证据、可选沙金第二语义和白色画布](examples/style-gallery/palettes/CLR-007.svg)
+
+- 主蓝 `#284B7D`；中蓝 `#5F86B8`；浅蓝 `#CBD9ED`；第二语义沙金 `#E8CDA9`。
+- 画布 `#FFFFFF`；正文 `#252525`；辅助文字 `#8E8E8E`；线条 `#D8DADD`。
+
+色卡中的 `Second role *` 表示**有第二语义才用沙金**，不做蓝金各半，也不把沙金当风险色。辅助灰只用于短标签，投影前须复核对比度。
+
+配色卡：[CLR-008 · 黑白灰](skills/my-report-taste/references/CLR-008.md)
+
+![CLR-008 配色：近黑、深灰、白色与冷中性灰](examples/style-gallery/palettes/CLR-008.svg)
+
+- 正文／关键系列 `#222222`；深灰表面 `#555555`；辅助文字 `#707070`。
+- 画布 `#FFFFFF` 或 `#F7F7F7`；线条 `#D0D0D0`。
+
+没有固定的彩色强调色。照片、截图保留原色，但其颜色不自动扩展为全局主题。
 
 私人的偏好可以放在项目 `.report-taste/profile.md`，不会被本仓库默认打包。
 
