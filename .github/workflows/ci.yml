@@ -1,0 +1,29 @@
+name: Skill checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.10'
+      - name: Validate library and routes
+        run: python skills/my-report-taste/scripts/library.py validate --strict
+      - name: Unit tests
+        run: |
+          python -m unittest discover -s skills/my-report-taste/tests -p 'test_*.py'
+          python -m unittest discover -s tests -p 'test_*.py'
+      - name: Compare the example deck with its plan
+        run: python skills/my-report-taste/scripts/verify_deck_plan.py examples/synthetic-study/slide-plan.md examples/synthetic-study/demo.pptx
+      - name: Validate bilingual script structure
+        run: python skills/my-report-taste/scripts/check_speaker_script.py examples/synthetic-study/script-en.md --language en --paired examples/synthetic-study/script-zh.md --paired-language zh --minutes 3
+      - name: Public distribution check
+        run: python tools/check_public_release.py

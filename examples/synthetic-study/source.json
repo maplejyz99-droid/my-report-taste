@@ -1,0 +1,15 @@
+{
+  "id": "candidate-filter-fixture-v1",
+  "synthetic": true,
+  "warning": "Invented educational values. No real experiment, benchmark or deployment claim.",
+  "question": "How does candidate filtering change the accuracy-latency comparison?",
+  "method": ["Query", "Candidate filter", "Ranker", "Top result"],
+  "metrics": {"accuracy": "percent", "latency": "milliseconds per query"},
+  "rows": [
+    {"name": "Baseline", "accuracy": 84.0, "latency": 120},
+    {"name": "Compact filter", "accuracy": 86.0, "latency": 85},
+    {"name": "Large filter", "accuracy": 86.5, "latency": 160}
+  ],
+  "unmeasured": ["Repeatability", "Hardware and workload variation", "Memory use", "Candidate recall"],
+  "exclusions": "No seeds, confidence intervals, hardware or dataset are invented to imply a real evaluation."
+}

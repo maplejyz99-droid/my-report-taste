@@ -1,0 +1,4 @@
+interface:
+  display_name: "My Report Taste"
+  short_description: "建立自己的汇报偏好库，组织内容证据、可选风格预设与逐页双语讲稿"
+  default_prompt: "使用 $my-report-taste 整理这份汇报的内容和证据，优先保留我提供的模板，先不要自动采用作者配色。"

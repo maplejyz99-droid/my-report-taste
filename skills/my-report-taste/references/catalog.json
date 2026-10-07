@@ -1,0 +1,1501 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-07",
+  "shared_assets": [],
+  "entries": [
+    {
+      "id": "GRD-001",
+      "title": "红粉分层的高密度经营汇报系统",
+      "kind": "external-artifact",
+      "category": "grid",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "https://contents.xj-storage.jp/xcontents/AS08734/79a33d7c/8a50/4739/8bb7/f60fa9e91b35/140120260512527490.pdf",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-10",
+      "formats": [
+        "pdf"
+      ],
+      "use_cases": [
+        "项目周报",
+        "经营汇报",
+        "研究进展",
+        "论文答辩"
+      ],
+      "tags": [
+        "16:9",
+        "PowerPoint 导出",
+        "严格网格",
+        "强章节页",
+        "高密度",
+        "红粉分层",
+        "固定页眉页脚"
+      ],
+      "pattern_file": "references/GRD-001.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "公开 PDF URL",
+        "policy": "仅参考抽象原则，不复制品牌资产、原文、数据或页面成品"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "GRD-002",
+      "title": "蓝色全幅章节与白色圆角卡片的编辑式汇报系统",
+      "kind": "external-artifact",
+      "category": "grid",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "https://contents.xj-storage.jp/xcontents/AS04618/4e95a626/7752/4437/84f6/c58a589806e7/20260414153901970s.pdf",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-10",
+      "formats": [
+        "pdf"
+      ],
+      "use_cases": [
+        "项目周报",
+        "经营汇报",
+        "研究进展",
+        "论文答辩"
+      ],
+      "tags": [
+        "16:9",
+        "Keynote 导出",
+        "编辑设计",
+        "圆角卡片",
+        "蓝色章节页",
+        "宽松留白",
+        "结论标题"
+      ],
+      "pattern_file": "references/GRD-002.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "公开 PDF URL",
+        "policy": "仅参考抽象原则，不复制品牌资产、原文、数据或页面成品"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "GRD-003",
+      "title": "深石油蓝光场、局部网格与高管叙事系统",
+      "kind": "external-artifact",
+      "category": "grid",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "https://speakerdeck.com/lenz_co/company-introduction",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-10",
+      "formats": [
+        "pdf"
+      ],
+      "use_cases": [
+        "公司介绍",
+        "招聘材料",
+        "战略汇报",
+        "组织文化",
+        "愿景型答辩开篇"
+      ],
+      "tags": [
+        "16:9",
+        "深石油蓝",
+        "非均匀光场",
+        "局部网格",
+        "高管叙事",
+        "超大编号",
+        "系统拓扑",
+        "密度呼吸"
+      ],
+      "pattern_file": "references/GRD-003.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "SpeakerDeck 公开页面与 PDF",
+        "policy": "仅复用抽象设计原则，不复制品牌字体、Logo、照片、背景图或页面成品"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "GRD-004",
+      "title": "柔性模块与人物叙事的高密度编辑型综合报告",
+      "kind": "external-artifact",
+      "category": "grid",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "https://www.shimamura.gr.jp/assets-c/uploads/integratedreport2025.pdf",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-10",
+      "formats": [
+        "pdf"
+      ],
+      "use_cases": [
+        "综合报告",
+        "年度与 ESG 报告",
+        "机构或项目年鉴",
+        "会后深度阅读 PDF",
+        "长篇案例与组织报告"
+      ],
+      "tags": [
+        "A 系列横向",
+        "高密度",
+        "独立阅读",
+        "编辑型",
+        "柔性模块",
+        "人物叙事",
+        "总图与局部共存",
+        "照片证据",
+        "红粉橙渐变",
+        "特殊场景启用"
+      ],
+      "pattern_file": "references/GRD-004.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "岛村集团公开 PDF URL",
+        "policy": "仅复用高密度编辑结构、视觉角色和叙事原则，不复制品牌、照片、插画、原文、数据或页面成品"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "DAT-001",
+      "title": "结论先行的关键列与当前期高亮数据语法",
+      "kind": "external-artifact",
+      "category": "data",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-10",
+      "formats": [
+        "pdf"
+      ],
+      "use_cases": [
+        "项目周报",
+        "经营汇报",
+        "实验结果",
+        "论文答辩"
+      ],
+      "tags": [
+        "表格",
+        "图表",
+        "结论先行",
+        "关键列",
+        "当前期高亮",
+        "历史数据弱化",
+        "直接标注",
+        "区间图",
+        "公式映射"
+      ],
+      "pattern_file": "references/DAT-001.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "原始资产未随公开版分发",
+        "policy": "仅复用跨来源抽象出的数据表达原则"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "DAT-002",
+      "title": "左侧解释栏与大幅证据画布的财务图表页",
+      "kind": "external-artifact",
+      "category": "data",
+      "status": "candidate",
+      "preference": "hypothesis",
+      "source_url": "https://contents.xj-storage.jp/xcontents/AS03634/61c72267/2cf4/47c3/b0e4/32c6759e9792/140120260430514812.pdf",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-10",
+      "formats": [
+        "pdf"
+      ],
+      "use_cases": [
+        "财务结果",
+        "经营 KPI",
+        "项目进展",
+        "实验结果",
+        "中期计划"
+      ],
+      "tags": [
+        "图表候选",
+        "左侧解释栏",
+        "大幅证据画布",
+        "实绩计划预测",
+        "直接数据标签",
+        "瀑布图",
+        "柱线组合",
+        "小多图",
+        "堆叠增长",
+        "非默认"
+      ],
+      "pattern_file": "references/DAT-002.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "AZoom 公开 PDF URL",
+        "policy": "仅作为可选图表布局与表达语法参考，不复制品牌、业务数据或页面成品"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "PRC-001",
+      "title": "卡片、箭头与几何关系驱动的业务示意图",
+      "kind": "external-artifact",
+      "category": "process",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-10",
+      "formats": [
+        "pdf"
+      ],
+      "use_cases": [
+        "业务说明",
+        "研究方法",
+        "系统架构",
+        "论文答辩"
+      ],
+      "tags": [
+        "卡片",
+        "箭头",
+        "几何关系",
+        "流程图",
+        "矩阵",
+        "业务版图",
+        "结构化示意图",
+        "系统拓扑",
+        "公式与区间"
+      ],
+      "pattern_file": "references/PRC-001.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "原始资产未随公开版分发",
+        "policy": "仅复用抽象构图，不复制插画、图标、品牌或业务内容"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "TYP-001",
+      "title": "超大编号、半等宽标题与微型信息的编辑式尺度",
+      "kind": "external-artifact",
+      "category": "typography",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "https://speakerdeck.com/lenz_co/company-introduction",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-10",
+      "formats": [
+        "pdf"
+      ],
+      "use_cases": [
+        "公司介绍",
+        "招聘材料",
+        "战略汇报",
+        "章节幕封"
+      ],
+      "tags": [
+        "超大标题",
+        "章节编号",
+        "半等宽气质",
+        "五级尺度",
+        "微型页脚",
+        "中英文排版"
+      ],
+      "pattern_file": "references/TYP-001.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "SpeakerDeck 公开页面与 PDF",
+        "policy": "仅复用字体角色、尺度关系和排版原则，不复制品牌字标或专有字体"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "CLR-001",
+      "title": "单主色、同色层级与中性色基底的克制配色",
+      "kind": "external-artifact",
+      "category": "color",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-10",
+      "formats": [
+        "pdf"
+      ],
+      "use_cases": [
+        "项目周报",
+        "经营汇报",
+        "研究进展",
+        "论文答辩"
+      ],
+      "tags": [
+        "克制配色",
+        "单主色",
+        "同色浅阶",
+        "中性灰",
+        "语义色",
+        "章节色块",
+        "例外色",
+        "深浅场景模式"
+      ],
+      "pattern_file": "references/CLR-001.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "原始资产未随公开版分发",
+        "policy": "仅复用色彩角色与比例，不复制官方品牌色资产"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "CLR-002",
+      "title": "Goodpatch 明亮蓝色技术汇报配色",
+      "kind": "external-artifact",
+      "category": "color",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "https://contents.xj-storage.jp/xcontents/AS04618/4e95a626/7752/4437/84f6/c58a589806e7/20260414153901970s.pdf",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-10",
+      "formats": [
+        "pdf"
+      ],
+      "use_cases": [
+        "技术组会",
+        "研究进展",
+        "工程汇报",
+        "论文答辩"
+      ],
+      "tags": [
+        "明亮蓝色",
+        "近白内容页",
+        "浅蓝层级",
+        "深灰正文",
+        "低频珊瑚风险色",
+        "禁止无语义琥珀色"
+      ],
+      "pattern_file": "references/CLR-002.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "公开 PDF URL",
+        "policy": "仅复用抽象色彩角色和近似色阶，不复制品牌标识、专有图案或官方主题资产"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "CLR-003",
+      "title": "深石油蓝、蓝灰表面与稀缺暖色的高管叙事配色",
+      "kind": "external-artifact",
+      "category": "color",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "https://speakerdeck.com/lenz_co/company-introduction",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-10",
+      "formats": [
+        "pdf"
+      ],
+      "use_cases": [
+        "公司介绍",
+        "招聘材料",
+        "战略汇报",
+        "组织文化"
+      ],
+      "tags": [
+        "深石油蓝",
+        "近黑封面",
+        "蓝灰表面",
+        "非均匀光场",
+        "统一比较表面",
+        "白色正文",
+        "稀缺暖色",
+        "生成默认无黄金融合",
+        "禁止黑金模板化"
+      ],
+      "pattern_file": "references/CLR-003.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "SpeakerDeck 公开页面与 PDF",
+        "policy": "仅复用抽象色彩角色和近似重建值，不复制背景图、品牌图形或官方主题资产"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "CLR-004",
+      "title": "冷灰蓝黑、青绿与珊瑚箭头的混合配色（不采用）",
+      "kind": "external-artifact",
+      "category": "color",
+      "status": "rejected",
+      "preference": "negative",
+      "source_url": "https://contents.xj-storage.jp/xcontents/AS03634/61c72267/2cf4/47c3/b0e4/32c6759e9792/140120260430514812.pdf",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-10",
+      "formats": [
+        "pdf"
+      ],
+      "use_cases": [
+        "配色排除",
+        "图表换肤",
+        "反模式检索"
+      ],
+      "tags": [
+        "不喜欢的配色",
+        "冷灰蓝黑",
+        "青绿分支",
+        "珊瑚渐变箭头",
+        "高频增长箭头",
+        "布局与颜色解耦",
+        "不代表排斥蓝色"
+      ],
+      "pattern_file": "references/CLR-004.md",
+      "asset_paths": [],
+      "reuse_mode": "visual-reference-only",
+      "license": {
+        "name": "未知",
+        "source": "AZoom 公开 PDF URL",
+        "policy": "仅记录负面配色边界和重配色要求，不复制品牌、数据或页面资产"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "CLR-005",
+      "title": "多主色、错误背景温度与主题色面积失真的生成失败（不采用）",
+      "kind": "generated-output",
+      "category": "color",
+      "status": "rejected",
+      "preference": "negative",
+      "source_url": "",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-11",
+      "formats": [
+        "mixed"
+      ],
+      "use_cases": [
+        "配色排除",
+        "生成稿验色",
+        "多路线换肤",
+        "反模式检索"
+      ],
+      "tags": [
+        "不喜欢的生成配色",
+        "通用仪表盘色板",
+        "多主色混配",
+        "过量黄色",
+        "单色平涂暗底",
+        "方法换底",
+        "交替行色",
+        "错误面积比例",
+        "石板钴蓝",
+        "石墨靛蓝",
+        "暖白背景",
+        "内容页大色块",
+        "布局与颜色解耦",
+        "来源偏好未被否定",
+        "色相门禁"
+      ],
+      "pattern_file": "references/CLR-005.md",
+      "asset_paths": [],
+      "reuse_mode": "adapt-generated-output",
+      "license": {
+        "name": "用户与 Codex 共同生成的本地成品",
+        "source": "原始资产未随公开版分发",
+        "policy": "只复用失败原因、修正规则与验收方法；具体项目事实按项目权限处理"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "OTH-001",
+      "title": "Slideland 多轴汇报组件分类法与动效扩展",
+      "kind": "web-reference",
+      "category": "other",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "https://www.slideland.tech/en/category-list",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-10",
+      "formats": [
+        "mixed"
+      ],
+      "use_cases": [
+        "技术组会",
+        "项目周报",
+        "论文答辩",
+        "汇报组件检索"
+      ],
+      "tags": [
+        "组件分类",
+        "页面职责",
+        "图表",
+        "图解",
+        "素材形式",
+        "视觉风格",
+        "使用语境",
+        "动效形式",
+        "多轴检索"
+      ],
+      "pattern_file": "references/OTH-001.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "网页内容版权归原权利人",
+        "source": "Slideland About This Site 与 Category List",
+        "policy": "仅复用公开分类思想与类别名称，不保存或复制网页中的来源幻灯片图片"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "PAG-001",
+      "title": "拼贴镜头缩放与语义化对象级联动效",
+      "kind": "video-reference",
+      "category": "pagination",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "https://cdn.dribbble.com/userupload/42564285/file/original-bbe384242cebbc3e013e883952703fc3.mp4",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-11",
+      "formats": [
+        "video"
+      ],
+      "use_cases": [
+        "技术组会",
+        "产品发布",
+        "研究汇报",
+        "网页演示",
+        "汇报预热视频"
+      ],
+      "tags": [
+        "motion:camera-zoom",
+        "motion:kpi-cascade",
+        "motion:count-up",
+        "motion:path-draw",
+        "motion:orbit-expand",
+        "整套拼贴",
+        "语义化动效",
+        "静态降级",
+        "只学习动效不学习紫色配色"
+      ],
+      "pattern_file": "references/PAG-001.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "Dribbble 公开展示页与视频 URL",
+        "policy": "仅重建抽象动效语法，不复制品牌、人物、文案、配色资产或页面成品"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "DAT-003",
+      "title": "受控视野与直接标注的定位地图证据组件",
+      "kind": "web-reference",
+      "category": "data",
+      "status": "candidate",
+      "preference": "hypothesis",
+      "source_url": "https://www.datawrapper.de/academy/category/locator-maps",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-11",
+      "formats": [
+        "mixed"
+      ],
+      "use_cases": [
+        "研究地点分布",
+        "设施与节点分布",
+        "路线与流量",
+        "区域覆盖",
+        "事件定位",
+        "空间关系说明"
+      ],
+      "tags": [
+        "diagram:locator-map",
+        "asset:map-basemap",
+        "受控视野",
+        "直接标注",
+        "底图弱化",
+        "点线面箭头",
+        "inset-map",
+        "移动端适配",
+        "静态终态",
+        "候选能力"
+      ],
+      "pattern_file": "references/DAT-003.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "Datawrapper 官方公开教程",
+        "source": "Datawrapper Academy",
+        "policy": "仅保存抽象制图流程、视觉原则和验收规则，不复制示例地图、底图瓦片、品牌或页面成品"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "GRD-005",
+      "title": "明亮蓝切角卡片与大幅工程证据画布",
+      "kind": "generated-output",
+      "category": "grid",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-11",
+      "formats": [
+        "html-deck",
+        "video",
+        "image"
+      ],
+      "use_cases": [
+        "技术组会",
+        "研究进展",
+        "工程汇报",
+        "容量规划",
+        "方案决策",
+        "论文答辩"
+      ],
+      "tags": [
+        "16:9",
+        "高级感",
+        "投影型中高证据密度",
+        "明亮蓝单主色",
+        "近白测量网格",
+        "固定微型chrome",
+        "切角重点卡",
+        "大幅工程证据画布",
+        "graph:line-area",
+        "diagram:hub-spoke",
+        "阈值线",
+        "直接标签",
+        "预测值分层",
+        "motion:path-draw"
+      ],
+      "pattern_file": "references/GRD-005.md",
+      "asset_paths": [],
+      "reuse_mode": "adapt-generated-output",
+      "license": {
+        "name": "用户与 Codex 共同生成的本地成品",
+        "source": "原始资产未随公开版分发",
+        "policy": "可复用自有版式、CSS、静态预览与动效配方；原始课题数据按具体项目权限使用"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "TYP-002",
+      "title": "思源 CJK × Source Sans 3 的中英文字体系统",
+      "kind": "generated-output",
+      "category": "typography",
+      "status": "candidate",
+      "preference": "hypothesis",
+      "source_url": "https://github.com/adobe-fonts/source-han-sans",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-11",
+      "formats": [
+        "pptx",
+        "pdf"
+      ],
+      "use_cases": [
+        "技术组会",
+        "经营汇报",
+        "中英双语汇报",
+        "高密度独立阅读 PDF",
+        "日文参考中文化"
+      ],
+      "tags": [
+        "Source Han Sans CN",
+        "Source Han Serif CN",
+        "Source Sans 3",
+        "Microsoft YaHei",
+        "Arial",
+        "简体中文地区字形",
+        "中英混排",
+        "字体嵌入",
+        "安全回退",
+        "候选字体系统"
+      ],
+      "pattern_file": "references/TYP-002.md",
+      "asset_paths": [],
+      "reuse_mode": "adapt-generated-output",
+      "license": {
+        "name": "SIL Open Font License 1.1",
+        "source": "Adobe 官方 Source Han Sans、Source Han Serif 与 Source Sans 3 仓库",
+        "policy": "可按 OFL 1.1 使用与再分发；保留随附许可，不声明字体或品牌归属"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "OTH-002",
+      "title": "按阅读场景拆分的多路线原型与自评闭环",
+      "kind": "generated-output",
+      "category": "other",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-11",
+      "formats": [
+        "mixed"
+      ],
+      "use_cases": [
+        "风格探索",
+        "技术组会",
+        "管理层汇报",
+        "会前阅读材料",
+        "正式归档报告"
+      ],
+      "tags": [
+        "多路线",
+        "场景化版本",
+        "演讲型",
+        "编辑型",
+        "独立阅读型",
+        "文档型",
+        "v1-v2-v3-color",
+        "自评闭环",
+        "配色负反馈闭环",
+        "字体安全导出",
+        "禁止只换色"
+      ],
+      "pattern_file": "references/OTH-002.md",
+      "asset_paths": [],
+      "reuse_mode": "adapt-generated-output",
+      "license": {
+        "name": "用户与 Codex 共同生成的方法",
+        "source": "原始资产未随公开版分发",
+        "policy": "可复用路线选择、迭代与验收方法；具体项目内容按各项目权限处理"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "CMP-001",
+      "title": "连续表面、发丝分隔与局部状态导轨的暗色比较表",
+      "kind": "generated-output",
+      "category": "comparison",
+      "status": "candidate",
+      "preference": "hypothesis",
+      "source_url": "",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-11",
+      "formats": [
+        "pptx",
+        "pdf",
+        "image"
+      ],
+      "use_cases": [
+        "技术组会",
+        "方案比较",
+        "方法选型",
+        "实验结果",
+        "风险分层"
+      ],
+      "tags": [
+        "连续表面",
+        "围合预算",
+        "内嵌发丝线",
+        "统一蓝灰表面",
+        "直接状态标签",
+        "局部状态导轨",
+        "禁止闭合行框",
+        "暗色比较表",
+        "候选组件"
+      ],
+      "pattern_file": "references/CMP-001.md",
+      "asset_paths": [],
+      "reuse_mode": "adapt-generated-output",
+      "license": {
+        "name": "用户与 Codex 共同生成的本地成品",
+        "source": "原始资产未随公开版分发",
+        "policy": "可复用表格结构、状态编码与视觉配方；具体课题数据按项目权限使用"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "GRD-006",
+      "title": "白色内容页、绿色胶囊导航与圆角幕封的成长战略系统",
+      "kind": "external-artifact",
+      "category": "grid",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "https://f.irbank.net/pdf/20260331/140120260331594348.pdf",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-11",
+      "formats": [
+        "pdf"
+      ],
+      "use_cases": [
+        "技术报告",
+        "成长战略",
+        "经营汇报",
+        "高密度独立阅读 PDF",
+        "绿色主题汇报"
+      ],
+      "tags": [
+        "16:9",
+        "纯白内容页",
+        "鲜绿主题",
+        "顶部胶囊导航",
+        "圆角章节幕封",
+        "低主题色面积",
+        "绿色表格",
+        "高密度",
+        "material:growth-strategy"
+      ],
+      "pattern_file": "references/GRD-006.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "公开 PDF URL",
+        "policy": "仅复用页面角色、版式骨架、色彩面积与图表语法，不复制品牌、Logo、照片、原文、数据或页面成品"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "CLR-006",
+      "title": "纯白基底、鲜绿锚点与薄荷浅阶的绿色主题配色",
+      "kind": "external-artifact",
+      "category": "color",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "https://f.irbank.net/pdf/20260331/140120260331594348.pdf",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-11",
+      "formats": [
+        "pdf"
+      ],
+      "use_cases": [
+        "技术报告",
+        "成长战略",
+        "经营汇报",
+        "绿色主题 PPT",
+        "绿色主题 PDF"
+      ],
+      "tags": [
+        "纯白背景",
+        "鲜绿锚点",
+        "薄荷浅阶",
+        "低频橙色",
+        "低主题色面积",
+        "禁止暖白",
+        "禁止普通页大色块"
+      ],
+      "pattern_file": "references/CLR-006.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "公开 PDF URL",
+        "policy": "仅重建颜色角色、面积与语义，不复制官方品牌资产或声称近似值为官方色值"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "GRD-007",
+      "title": "侧轨导航、结论标题与双语义证据的成长披露系统",
+      "kind": "external-artifact",
+      "category": "grid",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "https://ssl4.eir-parts.net/doc/325A/tdnet/2574510/00.pdf",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-11",
+      "formats": [
+        "pdf"
+      ],
+      "use_cases": [
+        "上市与成长可能性说明",
+        "投资者材料",
+        "消费品牌",
+        "医疗健康",
+        "经营战略",
+        "会后阅读型 PPT/PDF"
+      ],
+      "tags": [
+        "16:9",
+        "纯白信息中心",
+        "左侧侧轨",
+        "结论标题",
+        "深蓝证据",
+        "沙金第二语义",
+        "照片章节页",
+        "高密度",
+        "material:growth-potential-disclosure",
+        "industry:healthcare",
+        "industry:consumer-brand"
+      ],
+      "pattern_file": "references/GRD-007.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "公开 PDF URL",
+        "policy": "仅复用页面角色、版式骨架、色彩面积与证据语法，不复制品牌、Logo、照片、原文、数据或页面成品"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "CLR-007",
+      "title": "纯白基底、深蓝证据骨架与沙金第二语义",
+      "kind": "external-artifact",
+      "category": "color",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "https://ssl4.eir-parts.net/doc/325A/tdnet/2574510/00.pdf",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-11",
+      "formats": [
+        "pdf"
+      ],
+      "use_cases": [
+        "上市与成长可能性说明",
+        "投资者材料",
+        "消费品牌",
+        "医疗健康",
+        "经营战略"
+      ],
+      "tags": [
+        "纯白背景",
+        "深蓝主证据",
+        "浅蓝历史层",
+        "沙金第二语义",
+        "低主题色面积",
+        "禁止暖白",
+        "场景级深蓝",
+        "不恢复通用海军蓝默认"
+      ],
+      "pattern_file": "references/CLR-007.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "公开 PDF URL",
+        "policy": "仅重建颜色角色、面积与语义，不复制官方品牌资产或声称抽样值为官方色值"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "GRD-008",
+      "title": "黑白章节幕封、微型 Chrome 与内容驱动构图的设计公司 Deck",
+      "kind": "external-artifact",
+      "category": "grid",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-11",
+      "formats": [
+        "pdf"
+      ],
+      "use_cases": [
+        "公司介绍",
+        "招聘材料",
+        "产品与设计团队",
+        "品牌叙事",
+        "组织文化",
+        "设计型路演"
+      ],
+      "tags": [
+        "16:9",
+        "黑白灰",
+        "无固定主题色",
+        "暗色章节幕封",
+        "纯白内容页",
+        "微型chrome",
+        "斜向几何",
+        "大字号",
+        "照片证据",
+        "内容驱动构图",
+        "material:company-deck",
+        "industry:design",
+        "industry:saas"
+      ],
+      "pattern_file": "references/GRD-008.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "原始资产未随公开版分发",
+        "policy": "仅复用抽象页面系统、黑白灰角色与构图原则，不复制品牌、斜杠 Logo、照片、截图、原文、数据或页面成品"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "CLR-008",
+      "title": "无彩主题、明度对比与局部语义色的黑白灰系统",
+      "kind": "external-artifact",
+      "category": "color",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-11",
+      "formats": [
+        "pdf"
+      ],
+      "use_cases": [
+        "公司介绍",
+        "招聘材料",
+        "产品与设计团队",
+        "品牌叙事",
+        "组织文化",
+        "非商务蓝主题"
+      ],
+      "tags": [
+        "无彩主题",
+        "炭黑幕封",
+        "纯白内容页",
+        "灰阶图表",
+        "素材颜色与系统颜色解耦",
+        "低频语义色",
+        "禁止暖白",
+        "禁止全篇暗色"
+      ],
+      "pattern_file": "references/CLR-008.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "原始资产未随公开版分发",
+        "policy": "仅重建无彩颜色角色、面积和局部语义原则，不复制品牌资产、图片或页面成品"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "GRD-009",
+      "title": "紫色章节幕封、白色高密内容页与细轨导航的公司 Deck",
+      "kind": "external-artifact",
+      "category": "grid",
+      "status": "candidate",
+      "preference": "hypothesis",
+      "source_url": "",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-11",
+      "formats": [
+        "pdf"
+      ],
+      "use_cases": [
+        "公司介绍",
+        "招聘材料",
+        "平台业务",
+        "创作者经济",
+        "多业务组合",
+        "成长战略"
+      ],
+      "tags": [
+        "16:9",
+        "紫色章节幕封",
+        "白色高密内容页",
+        "顶部细轨",
+        "薰衣草历史层",
+        "低频橙色",
+        "照片证据",
+        "material:company-deck",
+        "industry:creator-economy",
+        "industry:platform"
+      ],
+      "pattern_file": "references/GRD-009.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "原始资产未随公开版分发",
+        "policy": "仅复用页面角色、跨页节奏、色彩面积与信息组织，不复制品牌、Logo、照片、原文、数据或页面成品"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "CLR-009",
+      "title": "高饱和紫色幕封、白色证据页与薰衣草浅阶",
+      "kind": "external-artifact",
+      "category": "color",
+      "status": "candidate",
+      "preference": "hypothesis",
+      "source_url": "",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-11",
+      "formats": [
+        "pdf"
+      ],
+      "use_cases": [
+        "公司介绍",
+        "招聘材料",
+        "平台业务",
+        "创作者经济",
+        "多业务组合"
+      ],
+      "tags": [
+        "高饱和紫色",
+        "白色证据页",
+        "薰衣草浅阶",
+        "低频橙色第二语义",
+        "禁止普通页大面积紫色",
+        "禁止暖白",
+        "候选主题"
+      ],
+      "pattern_file": "references/CLR-009.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "原始资产未随公开版分发",
+        "policy": "仅重建颜色角色、近似色阶、面积比例和语义，不复制品牌资产或声称栅格抽样值为官方主题色"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "PAG-002",
+      "title": "固定代码画布与分步行段聚焦的代码讲解动效",
+      "kind": "web-reference",
+      "category": "pagination",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "https://slides.com/samuelcolvin/deck-a16632#/7/0/3",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-11",
+      "formats": [
+        "html-deck",
+        "image"
+      ],
+      "use_cases": [
+        "技术组会",
+        "项目汇报",
+        "代码走读",
+        "算法实现说明",
+        "问题复盘",
+        "论文答辩"
+      ],
+      "tags": [
+        "motion:code-line-focus",
+        "method:code-walkthrough",
+        "syntax-highlighting",
+        "stable-geometry",
+        "contrast-gating",
+        "fragment-step",
+        "逻辑段聚焦",
+        "静态降级",
+        "不继承来源黑底"
+      ],
+      "pattern_file": "references/PAG-002.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "Slides.com 公开演示与用户提供截图",
+        "policy": "仅复用固定代码画布、分步行段聚焦与静态降级原则，不复制讲者原文、品牌或页面成品"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "PAG-003",
+      "title": "同图多状态、时间演化与流向揭示的数据叙事动效",
+      "kind": "web-reference",
+      "category": "pagination",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "https://helpcenter.flourish.studio/hc/en-us/articles/8761559998351-Creating-a-story",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-11",
+      "formats": [
+        "mixed"
+      ],
+      "use_cases": [
+        "技术组会",
+        "项目汇报",
+        "实验趋势",
+        "训练过程",
+        "请求与样本流向",
+        "资源分配",
+        "论文答辩"
+      ],
+      "tags": [
+        "motion:state-transition",
+        "motion:time-scrub",
+        "motion:path-draw",
+        "motion:flow-reveal",
+        "graph:sankey",
+        "同图多状态",
+        "渐进揭示",
+        "直接注释",
+        "静态关键状态",
+        "不继承平台模板审美"
+      ],
+      "pattern_file": "references/PAG-003.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "Flourish 官方公开说明与示例",
+        "source": "Flourish Help Center、官方博客与产品页",
+        "policy": "仅复用状态式数据叙事、渐进揭示与媒介降级原则，不复制模板成品、示例数据或品牌资产"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "DAT-004",
+      "title": "竖版双证据单元与模块化图表字典",
+      "kind": "external-artifact",
+      "category": "data",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "https://hai.stanford.edu/assets/files/ai_index_report_2026.pdf",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-12",
+      "formats": [
+        "pdf"
+      ],
+      "use_cases": [
+        "技术组会",
+        "项目汇报",
+        "实验结果",
+        "性能比较",
+        "会后阅读型项目报告"
+      ],
+      "tags": [
+        "US Letter 竖版",
+        "graph:line",
+        "graph:horizontal-bar",
+        "graph:stacked-bar",
+        "graph:diverging-bar",
+        "graph:slopegraph",
+        "graph:scatter",
+        "graph:heatmap",
+        "graph:small-multiples",
+        "layout:vertical-two-up",
+        "pagination:semantic-module-split",
+        "直接标签",
+        "阈值线",
+        "来源与脚注",
+        "当前历史分层",
+        "重排为16:9",
+        "不机械对半裁切"
+      ],
+      "pattern_file": "references/DAT-004.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "Stanford HAI 官方公开 PDF",
+        "policy": "仅复用图表语法、证据模块、色彩角色和媒介适配原则，不复制或分发品牌、插画、原文、数据、字体或页面成品"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "OTH-003",
+      "title": "关系密度、原生证据与技术场景素材的高密度迭代规则",
+      "kind": "generated-output",
+      "category": "other",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-12",
+      "formats": [
+        "pptx",
+        "pdf"
+      ],
+      "use_cases": [
+        "技术组会",
+        "项目汇报",
+        "实验结果",
+        "性能比较",
+        "会后独立阅读",
+        "高密度证据页",
+        "自我迭代验收"
+      ],
+      "tags": [
+        "true-high-density",
+        "relationship-density",
+        "native-evidence",
+        "readable-embedded-charts",
+        "technology-native-scene",
+        "formula-integration",
+        "variable-page-rhythm",
+        "no-card-wall",
+        "no-screenshot-shrinking",
+        "iterative-qa",
+        "表格图表文字分工",
+        "总图局部对应",
+        "author-prepared-figures-first",
+        "no-export-convenience-design",
+        "no-universal-horizontal-track",
+        "three-second-decode-gate",
+        "capacity-boundary-table-first"
+      ],
+      "pattern_file": "references/OTH-003.md",
+      "asset_paths": [],
+      "reuse_mode": "adapt-generated-output",
+      "license": {
+        "name": "用户与 Codex 共同形成的方法",
+        "source": "原始资产未随公开版分发",
+        "policy": "方法、验收规则与自有版式可复用；具体项目数据、代码、截图和第三方素材仍按来源权限处理"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "GRD-010",
+      "title": "葛冬冬角色变密度、证据占用与学术页型节奏",
+      "kind": "external-artifact",
+      "category": "grid",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-28",
+      "formats": [
+        "pptx"
+      ],
+      "use_cases": [
+        "学术组会",
+        "专家研讨会",
+        "论文答辩",
+        "研究进展",
+        "会后阅读型 PPT"
+      ],
+      "tags": [
+        "density:role-adaptive",
+        "density:evidence-occupied",
+        "density:measured-source-anchor",
+        "density:text-plus-figure",
+        "layout:occupied-but-ordered",
+        "layout:variable-page-rhythm",
+        "text:source-median-103-units",
+        "font:source-weighted-median-14pt",
+        "page_role:text-evidence",
+        "page_role:formula-evidence",
+        "page_role:figure-evidence",
+        "page_role:mixed-evidence",
+        "page_role:transition-reset",
+        "projection:split-not-shrink",
+        "exclude:sparse-commercial",
+        "exclude:uniform-small-type",
+        "color_route:CLR-010",
+        "narrative_route:NAR-001"
+      ],
+      "pattern_file": "references/GRD-010.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "原始资产未随公开版分发",
+        "policy": "仅复用经 OOXML 与静态渲染核验的密度分布、页型关系和媒介适配原则；不复制论文原文、实验数据、图表、Logo、二维码或页面成品"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "CLR-010",
+      "title": "葛冬冬学术酒红标题、冷白画布与论文蓝来源",
+      "kind": "external-artifact",
+      "category": "color",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-28",
+      "formats": [
+        "pptx"
+      ],
+      "use_cases": [
+        "学术组会",
+        "专家研讨会",
+        "论文答辩",
+        "研究进展",
+        "会后阅读型 PPT"
+      ],
+      "tags": [
+        "color:academic-wine",
+        "title:wine-by-default",
+        "title:sans-bold",
+        "canvas:cold-white",
+        "citation:blue",
+        "single-primary-family",
+        "exact-color-anchors",
+        "density_route:GRD-010",
+        "exclude:berry-maroon",
+        "exclude:black-title-default",
+        "exclude:product-marketing"
+      ],
+      "pattern_file": "references/CLR-010.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "原始资产未随公开版分发",
+        "policy": "仅复用经 OOXML 与渲染核验的颜色角色、近似色阶、面积和标题语义；不复制品牌、论文内容、图表、Logo、二维码或页面成品"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    },
+    {
+      "id": "NAR-001",
+      "title": "结论驱动、证据闭环与论文溯源的专家型学术研讨会",
+      "kind": "external-artifact",
+      "category": "narrative",
+      "status": "approved",
+      "preference": "confirmed",
+      "source_url": "",
+      "source_locator": "原始材料定位参见来源；公开版仅包含文字分析，不附原件。",
+      "collected_at": "2026-08-27",
+      "formats": [
+        "pptx"
+      ],
+      "use_cases": [
+        "学术组会",
+        "专家研讨会",
+        "论文答辩",
+        "研究进展",
+        "项目阶段总结",
+        "会后阅读型 PPT"
+      ],
+      "tags": [
+        "16:9",
+        "material:research-seminar",
+        "industry:operations-research",
+        "taste:academic",
+        "taste:evidence-dense",
+        "density:role-adaptive",
+        "density:evidence-occupied",
+        "density:measured-source-anchor",
+        "density_route:GRD-010",
+        "claim-driven-title",
+        "research-roadmap",
+        "paper-footer-citation",
+        "structural-fidelity-default",
+        "layout-silhouette-variety",
+        "visible-full-citation",
+        "future-work-gate",
+        "bottom-line-strip",
+        "page_role:method",
+        "page_role:result",
+        "page_role:boundary",
+        "diagram:formula",
+        "diagram:process",
+        "color:academic-wine",
+        "color_route:CLR-010",
+        "title:wine-by-default",
+        "title:sans-bold",
+        "citation:blue",
+        "expert-audience",
+        "exclude:product-marketing"
+      ],
+      "pattern_file": "references/NAR-001.md",
+      "asset_paths": [],
+      "reuse_mode": "recreate-principles-only",
+      "license": {
+        "name": "未知",
+        "source": "原始资产未随公开版分发",
+        "policy": "仅复用叙事结构、页面语法、视觉角色和媒介适配原则；不复制论文原文、实验数据、品牌、Logo、二维码、产品素材或页面成品"
+      },
+      "preference_scope": "author-example-not-user-preference"
+    }
+  ]
+}

@@ -1,0 +1,395 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-07",
+  "routes": [
+    {
+      "id": "academic-paper-oral",
+      "type": "workflow",
+      "priority": 100,
+      "title": "学术论文讲述流程",
+      "description": "组织论文理解、核心证据、方法解释与主讲／备份；视觉由已有模板、用户指定或个人场景偏好另行选择。",
+      "triggers": [
+        "学术 Oral",
+        "学术oral",
+        "会议论文报告",
+        "论文会议",
+        "论文组会",
+        "论文答辩",
+        "单篇论文讲解",
+        "论文汇报",
+        "conference talk",
+        "paper presentation",
+        "academic oral",
+        "oral presentation",
+        "oral",
+        "学术研讨会"
+      ],
+      "use_cases": [
+        "论文会议 Oral",
+        "论文答辩",
+        "单篇论文讲解"
+      ],
+      "main": [],
+      "auxiliary": [],
+      "palette": [],
+      "contracts": [
+        "references/ppt-contract.md"
+      ],
+      "references": [
+        "references/academic-paper-oral-workflow.md"
+      ],
+      "gate_refs": []
+    },
+    {
+      "id": "academic-oral-wine",
+      "requires_explicit": true,
+      "priority": 95,
+      "title": "葛冬冬式专家学术 Oral",
+      "description": "可选作者预设；明确选择时启用。结构高保真复用研究路线、职责化证据页、学术酒红标题和角色自适应高密度；排除源稿后段黄色教学产品宣传页。",
+      "triggers": [
+        "纯正学术味",
+        "按葛冬冬",
+        "葛冬冬 PPT",
+        "NAR-001"
+      ],
+      "use_cases": [
+        "论文会议 Oral",
+        "专家型研究长报告",
+        "论文答辩",
+        "单篇论文讲解"
+      ],
+      "main": [
+        "NAR-001"
+      ],
+      "auxiliary": [
+        "GRD-010"
+      ],
+      "palette": [
+        "CLR-010"
+      ],
+      "contracts": [
+        "references/ppt-contract.md"
+      ],
+      "references": [
+        "references/academic-paper-oral-workflow.md"
+      ],
+      "gate_refs": [
+        "nar-001.structural-fidelity",
+        "nar-001.paper-source-closure",
+        "nar-001.research-agenda-ending",
+        "grd-010.role-adaptive-density",
+        "grd-010.dual-scale-qa",
+        "clr-010.wine-title-required",
+        "clr-010.palette-role-integrity"
+      ]
+    },
+    {
+      "id": "research-progress-light",
+      "priority": 100,
+      "title": "常规组会与研究进展",
+      "description": "可选作者预设；明确选择时启用。近白内容页、明亮蓝单主色、清楚章节转场和结论先行的常规个人汇报默认路线。",
+      "triggers": [
+        "author-light",
+        "亮蓝研究汇报",
+        "蓝色研究汇报"
+      ],
+      "use_cases": [
+        "技术组会",
+        "研究进展",
+        "项目进展"
+      ],
+      "main": [
+        "GRD-002"
+      ],
+      "auxiliary": [],
+      "palette": [
+        "CLR-002"
+      ],
+      "contracts": [
+        "references/ppt-contract.md"
+      ],
+      "references": [],
+      "gate_refs": [
+        "grd-002.chapter-content-rhythm",
+        "grd-002.conclusion-first",
+        "clr-002.white-content-rhythm",
+        "clr-002.single-blue-focus"
+      ],
+      "requires_explicit": true
+    },
+    {
+      "id": "experiment-review",
+      "priority": 90,
+      "title": "实验结果与性能复盘",
+      "description": "可选作者预设；明确选择时启用。以投影可读的大幅工程证据画布承载性能比较，结论、关键列、阈值、来源口径和风险直接对齐。",
+      "triggers": [],
+      "use_cases": [
+        "实验结果汇报",
+        "性能比较",
+        "问题复盘"
+      ],
+      "main": [
+        "GRD-005"
+      ],
+      "auxiliary": [
+        "DAT-001",
+        "DAT-004"
+      ],
+      "palette": [
+        "CLR-002"
+      ],
+      "contracts": [
+        "references/ppt-contract.md"
+      ],
+      "references": [],
+      "gate_refs": [
+        "grd-005.three-second-evidence",
+        "grd-005.projected-chart-legibility",
+        "dat-001.claim-evidence-alignment",
+        "dat-001.three-second-highlight",
+        "dat-004.one-data-question",
+        "dat-004.provenance-complete",
+        "clr-002.white-content-rhythm"
+      ],
+      "requires_explicit": true
+    },
+    {
+      "id": "technical-review-light",
+      "priority": 80,
+      "title": "浅色技术方案与架构评审",
+      "description": "可选作者预设；明确选择时启用。沿用明亮蓝、近白内容页和稳定网格，通过几何关系解释架构、依赖、输入输出和决策。",
+      "triggers": [
+        "浅色架构"
+      ],
+      "use_cases": [
+        "技术方案",
+        "架构评审",
+        "短篇决策说明"
+      ],
+      "main": [
+        "GRD-002"
+      ],
+      "auxiliary": [
+        "PRC-001"
+      ],
+      "palette": [
+        "CLR-002"
+      ],
+      "contracts": [
+        "references/ppt-contract.md"
+      ],
+      "references": [],
+      "gate_refs": [
+        "grd-002.chapter-content-rhythm",
+        "grd-002.conclusion-first",
+        "clr-002.white-content-rhythm",
+        "clr-002.single-blue-focus"
+      ],
+      "requires_explicit": true
+    },
+    {
+      "id": "technical-review-dark",
+      "priority": 85,
+      "title": "深色聚焦技术评审",
+      "description": "可选作者预设；明确选择时启用。仅在明确需要沉浸式深色聚焦时使用石油蓝黑光场、统一表面和稀缺暖色焦点。",
+      "triggers": [
+        "深色技术方案",
+        "深色架构评审",
+        "沉浸式深色",
+        "石油蓝黑",
+        "LENZ"
+      ],
+      "use_cases": [
+        "短篇技术方案",
+        "架构评审",
+        "深色项目总结"
+      ],
+      "main": [
+        "GRD-003"
+      ],
+      "auxiliary": [
+        "CMP-001"
+      ],
+      "palette": [
+        "CLR-003"
+      ],
+      "contracts": [
+        "references/ppt-contract.md"
+      ],
+      "references": [],
+      "gate_refs": [
+        "grd-003.grayscale-hierarchy",
+        "grd-003.shared-surface-family",
+        "clr-003.scarce-warm-focus",
+        "clr-003.nonuniform-dark-field"
+      ],
+      "requires_explicit": true
+    },
+    {
+      "id": "project-green",
+      "priority": 75,
+      "title": "鲜绿项目阶段汇报",
+      "description": "可选作者预设；明确选择时启用。用户明确要求绿色时启用；保持白色内容中心，鲜绿只承担章节、当前值、导航和关键结论。",
+      "triggers": [
+        "绿色主题",
+        "鲜绿",
+        "Space Market",
+        "绿色组会",
+        "绿色项目汇报"
+      ],
+      "use_cases": [
+        "绿色组会",
+        "项目阶段汇报",
+        "里程碑"
+      ],
+      "main": [
+        "GRD-006"
+      ],
+      "auxiliary": [],
+      "palette": [
+        "CLR-006"
+      ],
+      "contracts": [
+        "references/ppt-contract.md"
+      ],
+      "references": [],
+      "gate_refs": [
+        "grd-006.green-white-rhythm",
+        "clr-006.white-before-green"
+      ],
+      "requires_explicit": true
+    },
+    {
+      "id": "project-summary-dual-semantics",
+      "priority": 70,
+      "title": "双语义项目总结",
+      "description": "可选作者预设；明确选择时启用。仅在主证据和第二语义确实需要分层时使用深蓝证据骨架与低频沙金。",
+      "triggers": [
+        "主证据第二语义",
+        "深蓝沙金",
+        "TENTIAL"
+      ],
+      "use_cases": [
+        "项目总结",
+        "阶段总结",
+        "答辩"
+      ],
+      "main": [
+        "GRD-007"
+      ],
+      "auxiliary": [],
+      "palette": [
+        "CLR-007"
+      ],
+      "contracts": [
+        "references/ppt-contract.md"
+      ],
+      "references": [],
+      "gate_refs": [
+        "grd-007.three-second-dual-semantics",
+        "clr-007.sand-gold-budget"
+      ],
+      "requires_explicit": true
+    },
+    {
+      "id": "neutral-evidence-review",
+      "priority": 65,
+      "title": "无彩截图与证据复盘",
+      "description": "可选作者预设；明确选择时启用。截图、照片和原始图表较多时让系统颜色退出，以暗幕封、白内容页和素材真实颜色组织证据。",
+      "triggers": [
+        "无彩",
+        "黑白灰",
+        "截图很多",
+        "图片证据",
+        "Studio Company Deck"
+      ],
+      "use_cases": [
+        "截图证据复盘",
+        "项目总结",
+        "实验复盘"
+      ],
+      "main": [
+        "GRD-008"
+      ],
+      "auxiliary": [],
+      "palette": [
+        "CLR-008"
+      ],
+      "contracts": [
+        "references/ppt-contract.md"
+      ],
+      "references": [],
+      "gate_refs": [
+        "grd-008.dark-divider-white-content",
+        "clr-008.material-color-isolation"
+      ],
+      "requires_explicit": true
+    },
+    {
+      "id": "dense-reading-report",
+      "priority": 60,
+      "title": "高密度独立阅读报告",
+      "description": "可选作者预设；明确选择时启用。仅在独立阅读、总图与局部共存、证据充分和高分辨率媒介同时成立时启用；高密度来自关系闭合而非缩字。",
+      "triggers": [
+        "高密度报告"
+      ],
+      "use_cases": [
+        "会后深度阅读",
+        "综合报告",
+        "项目年鉴",
+        "报告型 PDF"
+      ],
+      "main": [
+        "GRD-004"
+      ],
+      "auxiliary": [
+        "OTH-003"
+      ],
+      "palette": [],
+      "contracts": [
+        "references/pdf-contract.md"
+      ],
+      "references": [],
+      "gate_refs": [
+        "grd-004.print-scale-legibility",
+        "grd-004.activation-threshold",
+        "oth-003.native-evidence-legibility",
+        "oth-003.relational-density"
+      ],
+      "requires_explicit": true
+    },
+    {
+      "id": "research-content",
+      "type": "workflow",
+      "priority": 100,
+      "title": "研究与实验汇报内容流程",
+      "description": "只选内容工作流，不选择配色或私人默认。",
+      "triggers": [
+        "研究进展",
+        "项目进展",
+        "组会",
+        "周报",
+        "实验复盘",
+        "实验结果",
+        "技术方案",
+        "架构评审",
+        "项目总结",
+        "research update"
+      ],
+      "use_cases": [
+        "研究进展",
+        "实验复盘"
+      ],
+      "main": [],
+      "auxiliary": [],
+      "palette": [],
+      "contracts": [
+        "references/ppt-contract.md"
+      ],
+      "references": [
+        "references/research-progress-workflow.md"
+      ],
+      "gate_refs": []
+    }
+  ]
+}

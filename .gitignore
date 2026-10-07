@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+dist/
+.report-taste/
+skills/my-report-taste/references/local-profile.md
+skills/my-report-taste/references/local/
+*.log
+.env
+.env.*
+private/
+diagnostics/
