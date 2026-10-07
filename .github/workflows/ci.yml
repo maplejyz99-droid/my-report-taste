@@ -23,6 +23,10 @@ jobs:
           python -m unittest discover -s tests -p 'test_*.py'
       - name: Compare the example deck with its plan
         run: python skills/my-report-taste/scripts/verify_deck_plan.py examples/synthetic-study/slide-plan.md examples/synthetic-study/demo.pptx
+      - name: Discover capabilities without installing tools
+        run: python skills/my-report-taste/scripts/doctor.py
+      - name: Build the standard-library report
+        run: python examples/portable-report/build_report.py --out dist/ci-portable-report
       - name: Validate bilingual script structure
         run: python skills/my-report-taste/scripts/check_speaker_script.py examples/synthetic-study/script-en.md --language en --paired examples/synthetic-study/script-zh.md --paired-language zh --minutes 3
       - name: Public distribution check

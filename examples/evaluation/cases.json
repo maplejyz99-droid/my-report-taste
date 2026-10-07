@@ -1,0 +1,34 @@
+{
+  "suite": "synthetic-preflight-v1",
+  "status": "not_run_with_agents",
+  "scope": "Small task-level smoke suite, not evidence of effectiveness on real papers",
+  "source": "../synthetic-study/source.json",
+  "deck": "../synthetic-study/demo.pptx",
+  "cases": [
+    {
+      "id": "create-zh",
+      "prompt": "根据提供的 source.json 制作一份中文研究汇报 PPTX，主讲 3 分钟，共 4 页主讲与 1 页备份。保留全部三组结果、指标单位和合成数据身份；解释准确率百分点差与相对延迟差的区别。只使用给定证据。视觉清楚可读即可。",
+      "inputs": ["source"],
+      "checks": ["all_rows_and_units", "synthetic_disclosure", "correct_deltas", "no_invented_results", "readable_chinese", "five_pages"]
+    },
+    {
+      "id": "edit-one-page",
+      "prompt": "只优化提供的 demo.pptx 第 3 页表格的阅读层级，完整保留三行结果和单位。不要改变其余页面、页序、主线或结论强度。另存新文件，不覆盖原件。",
+      "inputs": ["source", "deck"],
+      "checks": ["all_rows_and_units", "unchanged_other_pages_and_notes", "unchanged_page_order", "original_preserved", "readable_table"]
+    },
+    {
+      "id": "shorten-talk",
+      "prompt": "将提供的 demo.pptx 整理为 90 秒、最多 3 页主讲的短版，可保留备份页。保留合成数据身份、主要比较和关键限定，给出删减后的实际短讲正文与跳页衔接。另存，不覆盖原件。",
+      "inputs": ["source", "deck"],
+      "checks": ["at_most_three_main_pages", "critical_evidence_retained", "no_stronger_claim", "shorter_spoken_text", "usable_transitions", "original_preserved"]
+    },
+    {
+      "id": "scripts-only",
+      "prompt": "只为提供的最终 demo.pptx 写逐页中文和英文讲稿，不改 PPT。主讲 3 分钟，备份页另列。每种语言给出完整稿与真正更短的版本，注明估时假设；不要把估时写成已完成真人试讲。",
+      "inputs": ["source", "deck"],
+      "checks": ["deck_byte_identical", "actual_page_order", "bilingual_claim_agreement", "backup_excluded", "shorter_spoken_text", "timing_assumptions_visible"]
+    }
+  ],
+  "coverage_gaps": ["real paper mechanisms and formal equations", "paper screenshots", "complex Chinese typography", "long-deck narrative", "presenter and projector testing"]
+}

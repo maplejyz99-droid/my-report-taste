@@ -32,6 +32,16 @@ Example request:
 
 > Use $my-report-taste to prepare English and Chinese scripts for this exact deck version. Exclude backup slides from the talk time and write an actual shorter version.
 
+## Content before styling
+
+The same rough notes contain Baseline 84% / 120 ms, Compact 86% / 85 ms and Large 86.5% / 160 ms. The organized result page retains every setting, unit and synthetic-data disclosure, separates percentage points from relative change, and keeps the unmeasured conditions visible.
+
+The [before/after editing example](examples/synthetic-study/editing-case.md) also states what a request to enlarge the table should preserve. It is an authored teaching example, not an observed skill-on/off experiment.
+
+![Synthetic result page with the complete accuracy and latency comparison](examples/synthetic-study/preview.png)
+
+[Five-page PPTX, plan and bilingual scripts](examples/synthetic-study/README.md) · [Python-only HTML/Markdown rebuild](examples/portable-report/README.md) · [Task-level evaluation protocol and limits](docs/evaluation.md)
+
 ## Style gallery
 
 The 35 text-only cards form an optional reference library. Their approval labels describe the author's evaluations, not your preferences. Supplied templates and your current request take precedence.
@@ -119,6 +129,9 @@ Store your preferences in a project `.report-taste/profile.md` or an installed s
 ## Validate
 
 ```bash
+python3 skills/my-report-taste/scripts/doctor.py
+python3 skills/my-report-taste/scripts/library.py route "research update" --preset author-light --template-state absent
+python3 skills/my-report-taste/scripts/library.py route --card NAR-001 --template
 python3 skills/my-report-taste/scripts/library.py validate --strict
 python3 -m unittest discover -s skills/my-report-taste/tests -p 'test_*.py'
 python3 -m unittest discover -s tests -p 'test_*.py'
@@ -127,7 +140,7 @@ python3 tools/check_public_release.py
 
 Core checks use the standard library. Image color checks require Pillow. Optional PPTX/PDF conversion and inspection require external rendering tools; see [installation and limitations](docs/installation.md). Automatic checks do not replace source review, rendered-page inspection, translation review, or rehearsal.
 
-The [synthetic example](examples/synthetic-study/README.md) includes input data, a brief, a slide plan, presentation output, two speaker scripts, and verification notes. Its numbers are educational fixtures, not research results.
+Free-text routing now returns inactive visual candidates. After resolving the user's intent, pass `--preset` for a full preset or repeat `--card` for individual dimensions. Template state is explicitly `provided`, `absent` or `unknown`; `--template` means `provided`. These parameters record caller declarations, not user authorization. See [routing migration](skills/my-report-taste/references/routing.md) and [0.2.0 source changes](docs/release-notes-v0.2.0.md).
 
 ## License
 

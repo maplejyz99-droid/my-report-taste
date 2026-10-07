@@ -20,7 +20,7 @@ description: "收藏并复用用户认可的汇报叙事、证据、密度和视
 以下路径与脚本均相对本 skill 目录；仅阅读实际需要的分支。
 
 - 收藏参考：读 [intake-guide.md](references/intake-guide.md)、[collection-schema.md](references/collection-schema.md) 与 [catalog.json](references/catalog.json)。不把来源行业误当用户任务。
-- 选择路线：运行 `python3 scripts/library.py route "真实请求"`；有既定模板加 `--template`。`workflow` 路线只选择内容流程。所有视觉路线必须明确选择；可选方向见 [author-presets.md](references/author-presets.md)。关键词检索不替代对否定或歧义的理解。
+- 选择路线：`route "真实请求"` 只检索候选，不从提及预设或模板推断选择。代理确认意图后用 `--preset` 选整套，或重复 `--card` 仅选指定维度；模板状态用 `--template-state provided/absent/unknown` 声明，`--template` 是 provided 简写。无需反复询问已明确的指令。参数与迁移见 [routing.md](references/routing.md)，组合见 [author-presets.md](references/author-presets.md)。
 - 需要某种页面：运行 `python3 scripts/library.py search "页面职责或证据形式"`，阅读返回卡片；明确指定 ID 时直达 `references/<ID>.md`。普通检索不自动采用卡片为全局风格。
 - 幻灯片：读 [ppt-contract.md](references/ppt-contract.md)；学术论文另读 [academic-paper-oral-workflow.md](references/academic-paper-oral-workflow.md)。官方模板优先，不用不兼容的颜色 gate 判失败。
 - 研究讨论或实验记录转汇报：读 [research-progress-workflow.md](references/research-progress-workflow.md)，不要因提到论文就重新研究整篇论文。
@@ -41,6 +41,8 @@ description: "收藏并复用用户认可的汇报叙事、证据、密度和视
 
 沿用用户提供的目标、时长、模板与成品版本。确实影响结果的未知项才问，不反复确认已给信息。明确一套主视觉系统，按任务选择原生 PPTX、HTML、PDF 或 Markdown；引擎默认主题不是用户偏好。
 
+制作环境未知时可运行 `python3 scripts/doctor.py`，只检测相关能力，不安装依赖或启动浏览器／Office；检测到工具不等于已经验证导出。已有可信环境信息时复用，不为每次局部修改重复自检。
+
 幻灯片用同一份 slide-plan 记录页 ID、main／optional／backup、主张、证据与衔接，再核对成品。呈现、结构和语义修改分开；改变立场与结论强度需核对任务授权。全文内容或布局发生实质改变时重新核对相关证据。
 
 完整新作检查所有页；局部修改检查实际影响范围。文本抽取、计划比对、图像渲染、事实核验和真人试讲是不同证据。未运行、无法访问或仅机械通过的项目据实说明，不用自评分替代验证。
@@ -48,8 +50,9 @@ description: "收藏并复用用户认可的汇报叙事、证据、密度和视
 ## 工具入口
 
 ```bash
-python3 scripts/library.py route "学术 Oral 官方模板"
-python3 scripts/library.py route "author-light 研究进展"
+python3 scripts/library.py route "学术 Oral" --template
+python3 scripts/library.py route "研究进展" --preset author-light --template-state absent
+python3 scripts/library.py route --card NAR-001 --card GRD-010 --template
 python3 scripts/library.py validate --strict
 python3 scripts/verify_deck_plan.py PLAN.md
 python3 scripts/verify_deck_plan.py PLAN.md DECK.pptx --previous-plan OLD_PLAN.md

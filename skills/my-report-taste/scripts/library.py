@@ -389,8 +389,11 @@ def request_mentions(value: str, request: str) -> bool:
         pattern += r"(?![a-z0-9])"
     for match in re.finditer(pattern, request):
         prefix = request[max(0, match.start() - 32) : match.start()]
-        clause = re.split(r"[,，。;；.!?！？]|但是|不过|而是|改用|\bbut\b|\binstead\b", prefix)[-1]
-        if re.search(r"不要|不用|不采用|不使用|别用|无需|\b(?:not|no|without|avoid)\b", clause):
+        clause = re.split(r"[,，。;；.!?！？]|但是|不过|而是|而用|改用|\bbut\b|\binstead\b", prefix)[-1]
+        if re.search(r"不要|不用|不采用|不使用|别用|无需|没有|不需要|未提供|\b(?:not|no|without|avoid)\b", clause):
+            continue
+        suffix = request[match.end():match.end() + 24]
+        if re.match(r"\s*(?:这次|本次|暂时|先)?\s*(?:不要|不用|不采用|不使用|不选)", suffix):
             continue
         return True
     return False
@@ -410,9 +413,7 @@ def score_route(route: dict[str, Any], terms: list[str]) -> tuple[float, list[st
     if hits:
         strongest = max(hits, key=len)
         score = 50.0 + min(len(normalize_standard(strongest)), 30)
-        if route.get("requires_explicit", False):
-            score += 100.0
-        return score, [f"{strongest}:request/explicit-phrase"]
+        return score, [f"{strongest}:request/keyword-candidate"]
     if route.get("requires_explicit", False):
         return None
     weights = {"id": 5.0, "title": 4.0, "triggers": 4.0, "use_cases": 3.0, "description": 1.0}
@@ -439,40 +440,92 @@ def score_route(route: dict[str, Any], terms: list[str]) -> tuple[float, list[st
     return total, reasons
 
 
+def declared_selection(
+    routes: list[dict[str, Any]], preset: str | None, cards: list[str] | None,
+) -> dict[str, Any] | None:
+    """Resolve caller-declared state, not free-text intent or authorization."""
+    if preset and cards:
+        raise SystemExit("Choose either --preset or --card, not both")
+    if preset:
+        # Public preset alias; card IDs deliberately do not alias whole presets.
+        preset_id = {"author-light": "research-progress-light"}.get(preset, preset)
+        matches = [r for r in routes if r.get("requires_explicit") and r.get("id") == preset_id]
+        if len(matches) != 1:
+            raise SystemExit(f"Unknown preset: {preset}; use --card for individual card IDs")
+        return dict(matches[0])
+    if cards:
+        entries = {entry["id"]: entry for entry in catalog_entries()}
+        ids = list(dict.fromkeys(card.upper() for card in cards))
+        unknown = [card for card in ids if card not in entries]
+        if unknown:
+            raise SystemExit(f"Unknown card IDs: {', '.join(unknown)}")
+        selected = {
+            "id": "selected-cards", "title": "Caller-selected cards only", "type": "cards",
+            "main": [], "auxiliary": [], "palette": [], "contracts": [],
+            "references": [], "gate_refs": [],
+        }
+        for card in ids:
+            entry = entries[card]
+            selected["palette" if entry["category"] == "color" else "main"].append(card)
+            selected["references"].append(entry["pattern_file"])
+            path = safe_relative_path(entry["pattern_file"])
+            if path is not None:
+                selected["gate_refs"].extend(sorted(set(GATE_RE.findall(path.read_text(encoding="utf-8")))))
+        return selected
+    return None
+
+
+def route_state(route: dict[str, Any], selection: str, template_state: str) -> dict[str, Any]:
+    result = dict(route)
+    result["_selection"] = selection
+    result["_template_state"] = template_state
+    if selection == "candidate":
+        # A search hit must not leak active visual rules into the result.
+        result["_candidate_config"] = {key: list(route.get(key, [])) for key in
+                                       (*ROUTE_CARD_FIELDS, *ROUTE_FILE_FIELDS, "gate_refs")}
+        for key in result["_candidate_config"]:
+            result[key] = []
+    if template_state == "provided":
+        result["_visual_policy"] = "preserve-provided-template"
+        palette = list(result.get("palette", []))
+        result["_configured_palette"] = palette
+        result["palette"] = []
+        prefixes = tuple(card.casefold() + "." for card in palette)
+        result["gate_refs"] = [g for g in result.get("gate_refs", []) if not g.startswith(prefixes)]
+        result["references"] = [p for p in result.get("references", [])
+                                if Path(p).stem.upper() not in palette]
+    return result
+
+
 def route_rows(
-    terms: list[str], limit: int, *, supplied_template: bool = False
+    terms: list[str], limit: int, *, supplied_template: bool = False,
+    template_state: str = "unknown", preset: str | None = None, cards: list[str] | None = None,
 ) -> list[tuple[dict[str, Any], float, list[str]]]:
     routes = load_routes().get("routes", [])
     if not isinstance(routes, list):
         raise SystemExit("Routes 'routes' must be a list")
+    if template_state not in {"unknown", "provided", "absent"}:
+        raise SystemExit("Template state must be unknown, provided or absent")
+    if supplied_template:
+        if template_state == "absent":
+            raise SystemExit("Conflicting template declarations")
+        template_state = "provided"
+    selected = declared_selection(routes, preset, cards)
     request = " ".join(terms)
     if request and any(request_mentions(value, request) for value in (
         "不要使用我的风格", "不用我的风格", "do not use my style", "without my style"
     )):
         return []
-    supplied_template = supplied_template or any(
-        request_mentions(value, request) for value in (
-            "官方模板", "会议模板", "已有模板", "现有模板", "提供的模板", "用户母版",
-            "official template", "conference template", "provided template", "existing template",
-        )
-    )
+    if selected is not None:
+        return [(route_state(selected, "selected", template_state), 0.0, ["caller-declared selection"])]
     rows = []
     for route in routes:
         if not isinstance(route, dict):
             continue
         scored = score_route(route, terms)
         if scored is not None:
-            selected = dict(route)
-            if supplied_template:
-                selected["_visual_policy"] = "preserve-provided-template"
-                selected["_configured_palette"] = list(route.get("palette", []))
-                selected["palette"] = []
-                palette_prefixes = tuple(card.casefold() + "." for card in route.get("palette", []))
-                selected["gate_refs"] = [
-                    gate for gate in route.get("gate_refs", [])
-                    if not gate.startswith(palette_prefixes)
-                ]
-            rows.append((selected, scored[0], scored[1]))
+            state = "candidate" if route.get("requires_explicit") else "workflow-candidate"
+            rows.append((route_state(route, state, template_state), scored[0], scored[1]))
     rows.sort(
         key=lambda row: (
             -row[1],
@@ -502,10 +555,12 @@ def print_routes(rows: list[tuple[dict[str, Any], float, list[str]]], as_json: b
             f"main={','.join(route.get('main', [])) or '-'} | "
             f"aux={','.join(route.get('auxiliary', [])) or '-'} | "
             f"palette={','.join(route.get('palette', [])) or '-'} | "
-            f"score={score:.2f}"
+            f"selection={route.get('_selection')} | template={route.get('_template_state')} | score={score:.2f}"
         )
         if reasons:
             print(f"  match: {'; '.join(reasons)}")
+        if route.get("_selection") == "candidate":
+            print("  candidate only: no visual rules selected; use --preset or --card after resolving intent")
         if route.get("type") == "workflow":
             print(f"  workflow: {', '.join(route.get('references', []))}; visual style: not selected")
         if route.get("_visual_policy"):
@@ -869,14 +924,19 @@ def build_parser() -> argparse.ArgumentParser:
     vocab_parser.add_argument("--min-count", type=int, default=1)
     vocab_parser.add_argument("--json", action="store_true", dest="as_json")
 
-    route_parser = subparsers.add_parser("route", help="Resolve a personal reporting scenario")
+    route_parser = subparsers.add_parser("route", help="Find candidates or resolve explicitly declared route state")
     route_parser.add_argument("query", nargs="*", help="Scenario words; omit to list every route")
     route_parser.add_argument("--limit", type=int, default=5)
     route_parser.add_argument("--json", action="store_true", dest="as_json")
-    route_parser.add_argument(
+    template_group = route_parser.add_mutually_exclusive_group()
+    template_group.add_argument(
         "--template", action="store_true",
         help="Preserve a supplied template and suppress preset palette selection",
     )
+    template_group.add_argument("--template-state", choices=("unknown", "provided", "absent"), default="unknown")
+    selection_group = route_parser.add_mutually_exclusive_group()
+    selection_group.add_argument("--preset", help="Explicit preset ID (author-light alias accepted)")
+    selection_group.add_argument("--card", action="append", help="Select only this card; repeat for multiple dimensions")
 
     next_parser = subparsers.add_parser("next-id", help="Return the next ID for a prefix")
     next_parser.add_argument("prefix")
@@ -909,7 +969,8 @@ def main() -> int:
         print_vocab(args.field, args.contains, args.min_count, args.as_json)
         return 0
     if args.command == "route":
-        print_routes(route_rows(args.query, args.limit, supplied_template=args.template), args.as_json)
+        print_routes(route_rows(args.query, args.limit, supplied_template=args.template,
+                               template_state=args.template_state, preset=args.preset, cards=args.card), args.as_json)
         return 0
     if args.command == "search":
         if args.min_score_ratio is not None and not 0 <= args.min_score_ratio <= 1:

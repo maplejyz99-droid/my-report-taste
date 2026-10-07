@@ -37,6 +37,16 @@ python3 tools/install.py
 
 > 使用 $my-report-taste。收藏这份报告的表格组织方式，不收藏它的颜色；记录适用场景和来源。
 
+## 先看内容怎样组织
+
+同一份散乱笔记：Baseline 84% / 120 ms，Compact 86% / 85 ms，Large 86.5% / 160 ms。编辑后的页面保留全部设置、单位与合成数据身份，区分“增加 2.0 个百分点”和“延迟相对减少 29.2%”，并说明尚未测量什么。
+
+[修改前—组织后案例](examples/synthetic-study/editing-case.md)展示这些取舍，也列出“只放大表格”时应保留的结论与页面。它是教学示例，不是已完成的有／无 skill 对照。
+
+![合成示例结果页：完整保留准确率与延迟对照，明确标注合成数据](examples/synthetic-study/preview.png)
+
+[完整五页 PPTX、内容计划与双语讲稿](examples/synthetic-study/README.md) · [仅需 Python 的 HTML／Markdown 重建路径](examples/portable-report/README.md) · [任务级评测方案与未验证项](docs/evaluation.md)
+
 ## 风格预览
 
 公开版保留 35 张文字模式卡，但没有替新使用者确认任何偏好。卡片中的 approved／confirmed 是作者示例库的评价；官方模板与当前任务始终优先。
@@ -121,19 +131,15 @@ python3 tools/install.py
 
 私人的偏好可以放在项目 `.report-taste/profile.md`，不会被本仓库默认打包。
 
-## 一个不需要私人论文的完整示例
-
-[合成研究示例](examples/synthetic-study/README.md)包含原始数据、任务简报、逐页计划、演示成品、双语讲稿和验证说明。所有数据都明确标记为教学用合成值，不代表真实实验发现；没有复用私人论文、会议 Logo 或外部图表。
-
-![合成示例结果页：完整保留准确率与延迟对照，明确标注合成数据](examples/synthetic-study/preview.png)
-
 ## 检查工具
 
 以下命令在仓库根目录运行：
 
 ```bash
-python3 skills/my-report-taste/scripts/library.py route "学术 Oral 官方模板"
-python3 skills/my-report-taste/scripts/library.py route "author-light 研究进展"
+python3 skills/my-report-taste/scripts/doctor.py
+python3 skills/my-report-taste/scripts/library.py route "学术 Oral" --template
+python3 skills/my-report-taste/scripts/library.py route "研究进展" --preset author-light --template-state absent
+python3 skills/my-report-taste/scripts/library.py route --card NAR-001 --card GRD-010 --template
 python3 skills/my-report-taste/scripts/library.py validate --strict
 python3 -m unittest discover -s skills/my-report-taste/tests -p 'test_*.py'
 python3 -m unittest discover -s tests -p 'test_*.py'
@@ -141,6 +147,8 @@ python3 tools/check_public_release.py
 ```
 
 内容路由、计划比对和讲稿检查仅需 Python 标准库。验色另需 Pillow；PPTX → PDF 另需 LibreOffice，PDF 结构／字体检查另需 Poppler。详见[依赖与验证边界](docs/installation.md)。GitHub Actions 配置运行机械检查，不代表已经验证视觉质量或投影兼容。
+
+文本路由现在只返回候选；参数表达代理已经核对的选择，不替用户作决定。[路由迁移说明](skills/my-report-taste/references/routing.md) · [0.2.0 源码更新](docs/release-notes-v0.2.0.md)
 
 ## 许可与分发
 
